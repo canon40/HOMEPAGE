@@ -7,6 +7,8 @@ const translations = {
         hero_subtitle: "궁극의 표면 보호를 위한 하이엔드 코팅 솔루션",
         btn_explore: "제품 보기",
         prod_title: "프리미엄 라인업",
+        premium_bike: "퍼마코트 바이크",
+        premium_car: "퍼마코트 자동차",
         quick_title: "퍼마코트 퀵 (Quick)",
         quick_desc: "관리의 번거로움은 덜고, 신차의 감동은 더하다. 뿌리고 닦는 것만으로 완성되는 즉각적인 슬릭감과 광택.",
         titan_title: "퍼마코트 티탄 (Titan)",
@@ -33,6 +35,11 @@ const translations = {
         place_metal: "메탈 코팅: 수전, 싱크볼",
         place_fabric: "가죽 / 패브릭 코팅: 소파, 의자",
         click_for_detail: "상세 설명서 보기"
+        ,
+        bike_series_title: "퍼마코트 바이크 시리즈",
+        bike_series_desc: "바이크 전용 퍼마코트 라인업입니다.",
+        car_series_title: "퍼마코트 자동차 시리즈",
+        car_series_desc: "자동차 전용 퍼마코트 라인업입니다."
     },
     en: {
         nav_home: "Home",
@@ -42,6 +49,8 @@ const translations = {
         hero_subtitle: "Ultimate high-end coating solutions for surface protection.",
         btn_explore: "Explore Products",
         prod_title: "Premium Lineup",
+        premium_bike: "PERMACOAT BIKE",
+        premium_car: "PERMACOAT CAR",
         quick_title: "Permacoat Quick",
         quick_desc: "Less hassle in maintenance, more of that new-car thrill. Instant slickness and shine with a simple spray and wipe.",
         titan_title: "Permacoat Titan",
@@ -68,6 +77,11 @@ const translations = {
         place_metal: "Metal Coating: Faucets, Sink bowls",
         place_fabric: "Leather/Fabric Coating: Sofas, Chairs",
         click_for_detail: "View Detailed Manual"
+        ,
+        bike_series_title: "PERMACOAT BIKE SERIES",
+        bike_series_desc: "Premium Permacoat lineup dedicated for motorcycles.",
+        car_series_title: "PERMACOAT CAR SERIES",
+        car_series_desc: "Premium Permacoat lineup dedicated for cars."
     },
     ja: {
         nav_home: "ホーム",
@@ -77,6 +91,8 @@ const translations = {
         hero_subtitle: "究極の表面保護のためのハイエンドコーティングソリューション",
         btn_explore: "製品を見る",
         prod_title: "プレミアムラインナップ",
+        premium_bike: "PERMACOAT BIKE",
+        premium_car: "PERMACOAT CAR",
         quick_title: "パーマコート クイック (Quick)",
         quick_desc: "メンテナンスの手間を省き、新車の感動をさらに。スプレーして拭き取るだけで完成する即効性のある滑らかさと光沢。",
         titan_title: "パーマコート タイタン (Titan)",
@@ -112,6 +128,8 @@ const translations = {
         hero_subtitle: "Giải pháp phủ bảo vệ bề mặt cao cấp tối ưu.",
         btn_explore: "Xem Sản Phẩm",
         prod_title: "Dòng Cao Cấp",
+        premium_bike: "PERMACOAT BIKE",
+        premium_car: "PERMACOAT CAR",
         quick_title: "Permacoat Quick",
         quick_desc: "Giảm bớt sự phiền toái khi bảo dưỡng, tăng thêm cảm giác như xe mới. Độ bóng trơn láng tức thì chỉ với thao tác xịt và lau đơn giản.",
         titan_title: "Permacoat Titan",
@@ -147,6 +165,8 @@ const translations = {
         hero_subtitle: "提供极致表面保护的高端涂层解决方案",
         btn_explore: "探索产品",
         prod_title: "高端产品线",
+        premium_bike: "PERMACOAT BIKE",
+        premium_car: "PERMACOAT CAR",
         quick_title: "Permacoat Quick (快捷款)",
         quick_desc: "省去维护烦恼，更添新车般的惊喜。只需喷涂并擦拭，即可呈现即刻的柔滑感与光泽。",
         titan_title: "Permacoat Titan (泰坦款)",

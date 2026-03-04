@@ -3,15 +3,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initialize Language
     const savedLang = localStorage.getItem("siteLang") || "ko";
-    langSelect.value = savedLang;
+    if (langSelect) {
+        langSelect.value = savedLang;
+    }
     setLanguage(savedLang);
 
     // Event Listener for select
-    langSelect.addEventListener("change", (e) => {
-        const lang = e.target.value;
-        setLanguage(lang);
-        localStorage.setItem("siteLang", lang);
-    });
+    if (langSelect) {
+        langSelect.addEventListener("change", (e) => {
+            const lang = e.target.value;
+            setLanguage(lang);
+            localStorage.setItem("siteLang", lang);
+        });
+    }
 
     // Mobile Hamburger (simple toggle)
     const hamburger = document.querySelector('.hamburger');
@@ -60,6 +64,32 @@ document.addEventListener("DOMContentLoaded", () => {
             once: true,
             offset: 100,
             easing: 'ease-out-cubic'
+        });
+    }
+
+    // Living detail modal
+    const livingTrigger = document.getElementById('living-detail-trigger');
+    const livingModal = document.getElementById('living-modal');
+    const livingClose = livingModal ? livingModal.querySelector('.modal-close') : null;
+
+    if (livingTrigger && livingModal) {
+        const closeModal = () => {
+            livingModal.classList.remove('open');
+        };
+
+        livingTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            livingModal.classList.add('open');
+        });
+
+        if (livingClose) {
+            livingClose.addEventListener('click', closeModal);
+        }
+
+        livingModal.addEventListener('click', (e) => {
+            if (e.target === livingModal) {
+                closeModal();
+            }
         });
     }
 });
