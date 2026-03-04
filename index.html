@@ -1,0 +1,191 @@
+< !DOCTYPE html >
+    <html lang="ko">
+        <head>
+            <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Permacoat - Premium Coating Solutions</title>
+                    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+                    <link rel="stylesheet" href="css/style.css" />
+                    <!-- Font Awesome for icons -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+                    <!-- AOS Animation CSS -->
+                    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+                </head>
+                <body class="dark-theme">
+
+                    <!-- Navbar -->
+                    <nav class="navbar">
+                        <div class="logo">
+                            <span class="gradient-text">PERMACOAT</span>
+                        </div>
+                        <ul class="nav-links">
+                            <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                            <li><a href="#products" data-i18n="nav_products">Products</a></li>
+                            <li><a href="#living" data-i18n="nav_living">Duracoat Living Coating</a></li>
+                        </ul>
+                        <div class="lang-selector">
+                            <i class="fa-solid fa-globe"></i>
+                            <select id="language-select">
+                                <option value="ko">한국어</option>
+                                <option value="en">English</option>
+                                <option value="ja">日本語</option>
+                                <option value="vi">Tiếng Việt</option>
+                                <option value="zh">中文</option>
+                            </select>
+                        </div>
+                        <div class="hamburger">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </nav>
+
+                    <!-- Hero Section -->
+                    <section id="home" class="hero">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content" data-aos="zoom-in" data-aos-duration="1200">
+                            <h1 class="hero-title" data-i18n="hero_title">Permacoat Series</h1>
+                            <p class="hero-subtitle" data-i18n="hero_subtitle">Ultimate high-end coating solutions.</p>
+                            <a href="#products" class="btn btn-primary" data-i18n="btn_explore">Explore Products</a>
+                        </div>
+                    </section>
+
+                    <!-- Products Section -->
+                    <section id="products" class="section products-section">
+                        <div class="container">
+                            <div class="section-header" data-aos="fade-up">
+                                <h2 class="gradient-text" data-i18n="prod_title">Premium Lineup</h2>
+                            </div>
+
+                            <div class="product-grid">
+                                <!-- Quick -->
+                                <div class="product-card glass-panel" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="product-img" style="padding: 20px;">
+                                        <img src="images/quick.png" alt="Quick" style="height: 100%; object-fit: contain;" class="floating-item" />
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 data-i18n="quick_title">Permacoat Quick</h3>
+                                        <p data-i18n="quick_desc">Less hassle in maintenance, more of that new-car thrill. Instant slickness and shine with a simple spray and wipe.</p>
+                                        <ul class="specs-list">
+                                            <li><span data-i18n="tbl_polysilazane">Polysilazane</span>: <span class="highlight">15</span></li>
+                                            <li><span data-i18n="tbl_silane">Silane</span>: <span class="highlight">70</span></li>
+                                            <li><span data-i18n="tbl_resin">Resin</span>: <span>-</span></li>
+                                            <li><span data-i18n="tbl_io">I/O Ratio</span>: <span class="highlight">15</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="effect-img-container" style="width: 100%; height: 250px; overflow: hidden; border-radius: 0 0 16px 16px; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+                                        <img src="images/permacoat_bike_quick.png" alt="Quick Effect" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" />
+                                    </div>
+                                </div>
+
+                                <!-- Titan -->
+                                <div class="product-card glass-panel" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="product-img" style="padding: 20px;">
+                                        <img src="images/titan.png" alt="Titan" style="height: 100%; object-fit: contain; animation-delay: 0.5s;" class="floating-item" />
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 data-i18n="titan_title">Permacoat Titan</h3>
+                                        <p data-i18n="titan_desc">A solid shield that overwhelms daily scratches. A high-performance protective layer thoroughly guarding your paint from UV rays and contaminants.</p>
+                                        <ul class="specs-list">
+                                            <li><span data-i18n="tbl_polysilazane">Polysilazane</span>: <span class="highlight">30</span></li>
+                                            <li><span data-i18n="tbl_silane">Silane</span>: <span class="highlight">60</span></li>
+                                            <li><span data-i18n="tbl_resin">Resin</span>: <span>-</span></li>
+                                            <li><span data-i18n="tbl_io">I/O Ratio</span>: <span class="highlight">10</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="effect-img-container" style="width: 100%; height: 250px; overflow: hidden; border-radius: 0 0 16px 16px; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+                                        <img src="images/permacoat_bike_titan.png" alt="Titan Effect" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" />
+                                    </div>
+                                </div>
+
+                                <!-- Resin -->
+                                <div class="product-card glass-panel" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="product-img" style="padding: 20px;">
+                                        <img src="images/resin.png" alt="Resin" style="height: 100%; object-fit: contain; animation-delay: 1s;" class="floating-item" />
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 data-i18n="resin_title">Permacoat Resin</h3>
+                                        <p data-i18n="resin_desc">The pinnacle of professional coating, a depth that stands the test of time. Ultimate durability and glass-like shine achieved by an overwhelmingly thick protective film.</p>
+                                        <ul class="specs-list">
+                                            <li><span data-i18n="tbl_polysilazane">Polysilazane</span>: <span class="highlight">30</span></li>
+                                            <li><span data-i18n="tbl_silane">Silane</span>: <span class="highlight">40</span></li>
+                                            <li><span data-i18n="tbl_resin">Resin</span>: <span class="highlight">20</span></li>
+                                            <li><span data-i18n="tbl_io">I/O Ratio</span>: <span class="highlight">10</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="effect-img-container" style="width: 100%; height: 250px; overflow: hidden; border-radius: 0 0 16px 16px; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+                                        <img src="images/permacoat_bike_resin.png" alt="Resin Effect" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Living Coating Section -->
+                    <section id="living" class="section living-section">
+                        <div class="living-bg-overlay"></div>
+                        <div class="container relative-z">
+                            <div class="section-header" data-aos="fade-up">
+                                <h2 class="gradient-text" data-i18n="living_title">Duracoat Living Coating (Homecare Shield)</h2>
+                                <p class="section-desc" data-i18n="living_desc">Forms a thin protective layer on various interior surfaces to prevent contamination and revolutionize maintenance.</p>
+                            </div>
+
+                            <div class="features-grid">
+                                <div class="feature-box glass-panel" data-aos="fade-up" data-aos-delay="100">
+                                    <i class="fa-solid fa-droplet icon-gradient"></i>
+                                    <h4 data-i18n="living_clean">Easy-Clean</h4>
+                                    <p data-i18n="living_clean_desc">Repels dirt and significantly reduces your cleaning time.</p>
+                                </div>
+                                <div class="feature-box glass-panel" data-aos="fade-up" data-aos-delay="200">
+                                    <i class="fa-solid fa-shield-halved icon-gradient"></i>
+                                    <h4 data-i18n="living_protect">Surface Protection</h4>
+                                    <p data-i18n="living_protect_desc">Perfect layering so you never have to worry about surface damage.</p>
+                                </div>
+                                <div class="feature-box glass-panel" data-aos="fade-up" data-aos-delay="300">
+                                    <i class="fa-solid fa-leaf icon-gradient"></i>
+                                    <h4 data-i18n="living_safe">Safety & Hygiene</h4>
+                                    <p data-i18n="living_safe_desc">A premium, eco-friendly formula designed with people and nature in mind.</p>
+                                </div>
+                                <div class="feature-box glass-panel" data-aos="fade-up" data-aos-delay="400">
+                                    <i class="fa-solid fa-wand-magic-sparkles icon-gradient"></i>
+                                    <h4 data-i18n="living_look">Aesthetic Enhancement</h4>
+                                    <p data-i18n="living_look_desc">For the most luxurious shine, Permacoat is the answer.</p>
+                                </div>
+                            </div>
+
+                            <!-- Living Main Photo Linking to Details -->
+                            <div class="living-main-photo mt-5 mb-5" data-aos="zoom-in" data-aos-delay="200">
+                                <a href="living_coat_detail.html" target="_blank" class="living-detail-link">
+                                    <div class="image-wrapper">
+                                        <img src="images/living_main.png" alt="Living Coating" class="living-main-img floating-item" />
+                                        <div class="click-hint glass-panel">
+                                            <i class="fa-solid fa-hand-pointer"></i>
+                                            <span data-i18n="click_for_detail">자세한 설명서 보기</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="applications-container glass-panel mt-5" data-aos="zoom-in" data-aos-delay="200">
+                                <h3 class="mb-3 text-center" data-i18n="living_places">Application Areas</h3>
+                                <ul class="app-list">
+                                    <li><i class="fa-solid fa-check text-accent"></i> <span data-i18n="place_ceramic">Ceramic</span></li>
+                                    <li><i class="fa-solid fa-check text-accent"></i> <span data-i18n="place_uv">UV</span></li>
+                                    <li><i class="fa-solid fa-check text-accent"></i> <span data-i18n="place_metal">Metal</span></li>
+                                    <li><i class="fa-solid fa-check text-accent"></i> <span data-i18n="place_fabric">Fabric</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Footer -->
+                    <footer class="footer">
+                        <div class="container text-center">
+                            <p>&copy; 2026 PERMACOAT. All rights reserved.</p>
+                        </div>
+                    </footer>
+
+                    <!-- AOS Animation JS -->
+                    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                    <script src="js/translations.js"></script>
+                    <script src="js/script.js"></script>
+                </body>
+            </html>

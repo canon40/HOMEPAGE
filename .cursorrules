@@ -1,0 +1,38 @@
+# Cursor IDE Rules for Homepage Project
+
+## Project Overview
+This is a frontend web project built with pure HTML, CSS, and JavaScript. The project does not use a modern component framework (like React, Vue, or Angular) unless explicitly mentioned, and does not use CSS frameworks (like Tailwind CSS) currently.
+
+## Technology Stack
+- **HTML**: Semantic HTML5.
+- **CSS**: Vanilla CSS3 (`css/style.css`). Prioritize responsive design (flexbox, grid) and modern features.
+- **JavaScript**: Vanilla JavaScript (ES6+). Split logic across `js/script.js` and `js/translations.js` for localization.
+
+## Code Style & Best Practices
+### General
+- **Separation of Concerns**: Keep structure in HTML, presentation in CSS, and behavior in JavaScript. Do not use inline styles or event listeners (e.g., `onclick="..."`) in HTML.
+- **Comments**: Write clear, concise comments explaining "why" instead of "what". 
+
+### HTML
+- Use semantic tags (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`).
+- Ensure accessibility (a11y) by providing descriptive `alt` attributes for images and `aria-*` tags where necessary.
+
+### CSS
+- Use clear class naming conventions (e.g., BEM style where appropriate) to avoid style clashes.
+- Focus on responsive, mobile-first design using media queries.
+- Do not use Tailwind CSS unless strictly instructed by the user.
+
+### JavaScript
+- Use modern ES6+ syntax (`const`, `let`, arrow functions, destructuring).
+- Organize code into functions, avoiding deep nesting and large block functions.
+- For translation data, refer to `js/translations.js`. Keep new text strings centralized there.
+- Handle DOM manipulation safely and efficiently. Use `document.querySelector` and `document.getElementById`.
+
+## Files & Assets
+- **Images**: Located in the `images/` directory. Always use relative paths (e.g., `images/picture.jpg`, not `/images/...` or `C:/...`). When adding or referencing images, treat these paths as the single source of truth.
+- **File Encoding**: UTF-8.
+
+## Communication
+- Provide direct, concise, and helpful answers without unnecessary repetition.
+- If modifying large HTML files (e.g., `index.html`, `car_titan_detail.html`), be careful not to break existing structures or image paths.
+- Suggest UI/UX improvements that are modern, elegant, and professional.
