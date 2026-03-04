@@ -483,6 +483,28 @@ body.dark-theme {
     color: #fff;
 }
 
+/* Buyer docs section */
+.buyer-section {
+    background: radial-gradient(circle at top, rgba(59, 130, 246, 0.08), transparent 55%);
+}
+
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.download-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.download-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
 /* Living Section */
 .living-section {
     position: relative;
@@ -827,6 +849,10 @@ body.dark-theme {
 
     .finder-result {
         position: static;
+    }
+
+    .download-grid {
+        grid-template-columns: 1fr;
     }
 
     .applications-container {
