@@ -298,41 +298,6 @@ function setLanguage(lang) {
         }
     });
 
-    // VN 모달2(시리즈 모달) 강제 베트남어 적용 (캐시/폴백 문제 방지)
-    if (lang === 'vi') {
-        var vnCarBody = document.querySelector('[data-i18n="series_modal_car_body"]');
-        if (vnCarBody) {
-            vnCarBody.textContent =
-                '“Chất lượng như trung tâm chăm sóc chuyên nghiệp, nhưng ngay trong gara của bạn.”\n' +
-                'Dòng sản phẩm cho ô tô tập trung vào việc giữ độ bóng trên các bề mặt sơn lớn, đồng thời giảm chi phí bảo dưỡng lâu dài.\n\n' +
-                '[Quick] Giải pháp chăm sóc hằng ngày\n' +
-                '- Thi công dễ dàng: khoảng 40 phút là hoàn thành lớp phủ ở mức gần như trung tâm chuyên nghiệp, không cần đặt lịch hay chờ đợi lâu.\n' +
-                '- Bảo vệ tức thì: tạo ngay một lớp màng siêu kỵ nước, giúp thân xe chống mưa và bụi, việc rửa xe sau đó trở nên nhẹ nhàng hơn rất nhiều.\n\n' +
-                '[Titan] Giải pháp bảo vệ dài hạn\n' +
-                '- Giá trị kinh tế: giảm mạnh chi phí phủ chuyên nghiệp (thường 1.000–5.000 USD) nhưng vẫn tạo ra hàng rào bảo vệ 9H cực kỳ chắc chắn.\n' +
-                '- Độ bền ấn tượng: chỉ một lần phủ có thể duy trì 12–24 tháng, hạn chế tối đa việc phải đánh bóng hay phủ lại nhiều lần.\n\n' +
-                '[Resin] Hoàn thiện chuẩn xe trưng bày\n' +
-                '- Độ bóng gương: mang lại độ phản chiếu trong trẻo, làm nổi bật chiều sâu và sự phong phú của màu sơn.\n' +
-                '- Giữ giá trị xe: khả năng chặn tia UV mạnh giúp hạn chế phai màu, giữ xe ở trạng thái gần như mới trong thời gian dài.';
-        }
-
-        var vnBikeBody = document.querySelector('[data-i18n="series_modal_bike_body"]');
-        if (vnBikeBody) {
-            vnBikeBody.textContent =
-                '“Lớp bảo vệ hiệu năng chịu được nhiệt độ cực cao và phong cách lái mạnh mẽ.”\n' +
-                'Dòng sản phẩm cho xe máy tập trung vào bảo vệ khu vực động cơ nhiệt độ cao và chống ăn mòn cho các chi tiết chính xác.\n\n' +
-                '[Quick] Chăm sóc nhanh sau khi chạy xe\n' +
-                '- Tối ưu hiệu quả bảo dưỡng: có thể rút ngắn thời gian vệ sinh/bảo dưỡng sau mỗi chuyến đi lên đến 70%, tăng hiệu suất làm việc trong gara.\n' +
-                '- Dữ liệu thử nghiệm đường dài: hoàn thành bài test chịu đựng 10.000 km, chứng minh khả năng bảo vệ ổn định ngay cả trong điều kiện vận hành khắc nghiệt.\n\n' +
-                '[Titan] Giải pháp chắn nhiệt công nghệ cao\n' +
-                '- Chịu nhiệt đến 800°C: bảo vệ lớp phủ xung quanh động cơ và ống xả, nơi nhiệt độ rất cao.\n' +
-                '- Nano-ceramic 9H: bảo vệ bề mặt sơn và chi tiết mạ crôm khỏi đá văng cũng như các vết xước nhỏ trong quá trình vận hành.\n\n' +
-                '[Resin] Giải pháp phủ hoàn thiện chính xác\n' +
-                '- Thẩm thấu ở cấp độ phân tử: hạt nano len sâu vào các hình dạng phức tạp và bề mặt vi mô, tối đa hóa độ bóng.\n' +
-                '- Kiểm soát oxy hóa kim loại: hạn chế hiệu quả hiện tượng oxy hóa và ăn mòn quanh động cơ và các chi tiết crôm, giữ lại giá trị cao cấp của chiếc xe.';
-        }
-    }
-
     // Update document lang attribute
     document.documentElement.lang = lang;
     var sel = document.getElementById("language-select");
