@@ -303,6 +303,13 @@ body.dark-theme {
     margin-bottom: 40px;
 }
 
+.hero-country-name {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 36px;
+    letter-spacing: 0.04em;
+}
+
 @keyframes fadeInDown {
     from {
         opacity: 0;
