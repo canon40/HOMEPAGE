@@ -190,9 +190,10 @@ runOnReady(() => {
 });
 
 function setLanguage(lang) {
-    if (!translations[lang]) return;
-
+    if (!lang) lang = "ko";
     applyTheme(lang);
+
+    if (!translations[lang]) return;
 
     const dic = translations[lang];
     const elements = document.querySelectorAll("[data-i18n]");
