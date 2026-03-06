@@ -9,6 +9,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <body class="dark-theme">
+    <!-- Navbar (공통: 언어 선택 시 전체 사이트 적용) -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html" style="text-decoration: none; color: inherit;"><span class="gradient-text">PERMACOAT</span></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#home" data-i18n="nav_home">Home</a></li>
+        <li><a href="index.html#products" data-i18n="nav_products">Products</a></li>
+        <li><a href="index.html" data-i18n="nav_finder">Finder</a></li>
+        <li><a href="index.html#buyer-docs" data-i18n="nav_buyer">Buyer Docs</a></li>
+        <li><a href="index.html#living" data-i18n="nav_living">Duracoat Living Coating</a></li>
+      </ul>
+      <div class="lang-selector notranslate" translate="no">
+        <i class="fa-solid fa-globe"></i>
+        <span class="lang-label" data-i18n="nav_language_label">Language</span>
+        <select id="language-select" translate="no">
+          <option value="ko">한국어</option>
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="zh">中文</option>
+          <option value="it">Italiano</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="am">አማርኛ</option>
+          <option value="ar">العربية (السعودية)</option>
+        </select>
+      </div>
+      <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+
     <section class="section products-section">
       <div class="container">
         <div class="section-header">

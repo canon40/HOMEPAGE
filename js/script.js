@@ -1,12 +1,42 @@
-document.addEventListener("DOMContentLoaded", () => {
+/* 나라별 상징/선호 색상 테마 (언어 선택 시 적용) */
+var themeByLang = {
+    ko: { accent: "#c41e3a", accentHover: "#e63950", gradientPrimary: "linear-gradient(135deg, #c41e3a 0%, #8b1538 100%)", gradientText: "linear-gradient(to right, #e63950, #ff6b6b)", r: 196, g: 30, b: 58 },
+    en: { accent: "#2563eb", accentHover: "#3b82f6", gradientPrimary: "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)", gradientText: "linear-gradient(to right, #3b82f6, #60a5fa)", r: 37, g: 99, b: 235 },
+    ja: { accent: "#bc002d", accentHover: "#e60033", gradientPrimary: "linear-gradient(135deg, #bc002d 0%, #8b0020 100%)", gradientText: "linear-gradient(to right, #e60033, #ff4d6a)", r: 188, g: 0, b: 45 },
+    vi: { accent: "#DA251D", accentHover: "#ed3d35", gradientPrimary: "linear-gradient(135deg, #DA251D 0%, #b81e18 100%)", gradientText: "linear-gradient(to right, #ed3d35, #ff6b63)", r: 218, g: 37, b: 29 },
+    zh: { accent: "#de2910", accentHover: "#f04d30", gradientPrimary: "linear-gradient(135deg, #de2910 0%, #c41e0e 100%)", gradientText: "linear-gradient(to right, #f04d30, #ff7b5c)", r: 222, g: 41, b: 16 },
+    it: { accent: "#009246", accentHover: "#00b359", gradientPrimary: "linear-gradient(135deg, #009246 0%, #007a3a 100%)", gradientText: "linear-gradient(to right, #00b359, #34d97b)", r: 0, g: 146, b: 70 },
+    fr: { accent: "#002395", accentHover: "#0030c4", gradientPrimary: "linear-gradient(135deg, #002395 0%, #001a6e 100%)", gradientText: "linear-gradient(to right, #0030c4, #4169e1)", r: 0, g: 35, b: 149 },
+    de: { accent: "#ffcc00", accentHover: "#ffdb4d", gradientPrimary: "linear-gradient(135deg, #ffcc00 0%, #e6b800 100%)", gradientText: "linear-gradient(to right, #ffdb4d, #ffe066)", r: 255, g: 204, b: 0 },
+    am: { accent: "#078930", accentHover: "#0aad3d", gradientPrimary: "linear-gradient(135deg, #078930 0%, #056b26 100%)", gradientText: "linear-gradient(to right, #0aad3d, #34c759)", r: 7, g: 137, b: 48 },
+    ar: { accent: "#006C35", accentHover: "#008844", gradientPrimary: "linear-gradient(135deg, #006C35 0%, #005528 100%)", gradientText: "linear-gradient(to right, #008844, #00a854)", r: 0, g: 108, b: 53 }
+};
+
+function applyTheme(lang) {
+    var theme = themeByLang[lang];
+    if (!theme) theme = themeByLang.ko;
+    var r = theme.r, g = theme.g, b = theme.b;
+    var root = document.documentElement.style;
+    root.setProperty("--accent-color", theme.accent);
+    root.setProperty("--accent-hover", theme.accentHover);
+    root.setProperty("--gradient-primary", theme.gradientPrimary);
+    root.setProperty("--gradient-text", theme.gradientText);
+    root.setProperty("--accent-glow", "rgba(" + r + "," + g + "," + b + ",0.4)");
+    root.setProperty("--accent-glow-strong", "rgba(" + r + "," + g + "," + b + ",0.6)");
+    root.setProperty("--accent-glow-soft", "rgba(" + r + "," + g + "," + b + ",0.08)");
+    root.setProperty("--accent-border", "rgba(" + r + "," + g + "," + b + ",0.6)");
+}
+
+function initPage() {
     const langSelect = document.getElementById("language-select");
 
-    // Initialize Language
+    // 기본 언어: 한국어 (저장된 값이 없으면 항상 한국어로 시작)
     const savedLang = localStorage.getItem("siteLang") || "ko";
     if (langSelect) {
         langSelect.value = savedLang;
     }
     setLanguage(savedLang);
+    window._currentLang = savedLang;
 
     // Event Listener for select
     if (langSelect) {
@@ -14,8 +44,21 @@ document.addEventListener("DOMContentLoaded", () => {
             const lang = e.target.value;
             setLanguage(lang);
             localStorage.setItem("siteLang", lang);
+            window._currentLang = lang;
         });
     }
+}
+
+function runOnReady(fn) {
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", fn);
+    } else {
+        fn();
+    }
+}
+
+runOnReady(() => {
+    initPage();
 
     // Mobile Hamburger (simple toggle)
     const hamburger = document.querySelector('.hamburger');
@@ -79,6 +122,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         livingTrigger.addEventListener('click', (e) => {
             e.preventDefault();
+            var curLang = document.documentElement.lang || window._currentLang || 'ko';
+            setLanguage(curLang);
             livingModal.classList.add('open');
         });
 
@@ -102,6 +147,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (finderModal && (finderOpenBtn || finderNavLink)) {
         const openFinder = (e) => {
             if (e) e.preventDefault();
+            var curLang = document.documentElement.lang || window._currentLang || 'ko';
+            setLanguage(curLang);
             finderModal.classList.add('open');
         };
 
@@ -145,6 +192,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function setLanguage(lang) {
     if (!translations[lang]) return;
 
+    applyTheme(lang);
+
     const dic = translations[lang];
     const elements = document.querySelectorAll("[data-i18n]");
 
@@ -161,6 +210,8 @@ function setLanguage(lang) {
 
     // Update document lang attribute
     document.documentElement.lang = lang;
+    var sel = document.getElementById("language-select");
+    if (sel) sel.value = lang;
 
     // Finder 결과 텍스트도 현재 언어에 맞게 다시 계산
     if (typeof updateFinderResult === 'function') {

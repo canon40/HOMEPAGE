@@ -1,4 +1,4 @@
-/* Reset & Base Variables - Indigo theme */
+/* Reset & Base Variables - 테마 색상은 언어 선택 시 JS에서 덮어씀 */
 :root {
     --bg-color: #0d0f12;
     --bg-secondary: #1a1d24;
@@ -6,6 +6,10 @@
     --text-muted: #a0aab2;
     --accent-color: #4f46e5;
     --accent-hover: #6366f1;
+    --accent-glow: rgba(79, 70, 229, 0.4);
+    --accent-glow-strong: rgba(79, 70, 229, 0.6);
+    --accent-glow-soft: rgba(79, 70, 229, 0.08);
+    --accent-border: rgba(129, 140, 248, 0.6);
     --glass-bg: rgba(26, 29, 36, 0.6);
     --glass-border: rgba(255, 255, 255, 0.1);
     --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
@@ -110,12 +114,12 @@ body.dark-theme {
 .btn-primary {
     background: var(--gradient-primary);
     color: white;
-    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+    box-shadow: 0 4px 15px var(--accent-glow);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
+    box-shadow: 0 6px 20px var(--accent-glow-strong);
 }
 
 /* Glassmorphism Panels */
@@ -186,6 +190,12 @@ body.dark-theme {
 
 .lang-selector i {
     color: var(--text-muted);
+}
+
+.lang-selector .lang-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 .lang-selector select {
@@ -375,7 +385,7 @@ body.dark-theme {
 
 /* Finder Section */
 .finder-section {
-    background: radial-gradient(circle at top, rgba(129, 140, 248, 0.08), transparent 55%);
+    background: radial-gradient(circle at top, var(--accent-glow-soft), transparent 55%);
 }
 
 .finder-layout {
@@ -423,7 +433,7 @@ body.dark-theme {
     background: var(--gradient-primary);
     color: #fff;
     border-color: transparent;
-    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.5);
+    box-shadow: 0 8px 24px var(--accent-glow);
 }
 
 .finder-result {
@@ -446,8 +456,8 @@ body.dark-theme {
     display: inline-block;
     padding: 6px 16px;
     border-radius: 999px;
-    background: rgba(37, 99, 235, 0.1);
-    border: 1px solid rgba(129, 140, 248, 0.6);
+    background: var(--accent-glow-soft);
+    border: 1px solid var(--accent-border);
     font-size: 0.85rem;
     letter-spacing: 0.06em;
     margin-bottom: 12px;
@@ -474,18 +484,18 @@ body.dark-theme {
 .btn.btn-outline {
     background: transparent;
     color: var(--accent-hover);
-    border: 1px solid rgba(129, 140, 248, 0.6);
+    border: 1px solid var(--accent-border);
     box-shadow: none;
 }
 
 .btn.btn-outline:hover {
-    background: rgba(37, 99, 235, 0.15);
+    background: var(--accent-glow-soft);
     color: #fff;
 }
 
 /* Buyer docs section */
 .buyer-section {
-    background: radial-gradient(circle at top, rgba(79, 70, 229, 0.08), transparent 55%);
+    background: radial-gradient(circle at top, var(--accent-glow-soft), transparent 55%);
 }
 
 .download-grid {
