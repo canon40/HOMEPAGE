@@ -223,12 +223,16 @@ function setLanguage(lang) {
     if (!translations[lang]) lang = "ko";
     var dic = translations[lang];
 
-    // 언어별 국기 및 상징 이모지 표시
+    // 언어별 국기 및 상징 이모지 표시 (헤더 + 첨부 영역 등 공통)
     var meta = countryMetaByLang[lang] || {};
-    var flagEl = document.getElementById("lang-flag");
-    if (flagEl) flagEl.textContent = meta.flag || "";
-    var symbolEl = document.getElementById("lang-symbol");
-    if (symbolEl) symbolEl.textContent = meta.symbol || "";
+    var flags = document.querySelectorAll(".lang-flag");
+    flags.forEach(function (el) {
+        el.textContent = meta.flag || "";
+    });
+    var symbols = document.querySelectorAll(".lang-symbol");
+    symbols.forEach(function (el) {
+        el.textContent = meta.symbol || "";
+    });
 
     const elements = document.querySelectorAll("[data-i18n]");
 

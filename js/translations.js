@@ -674,7 +674,7 @@ const translations = {
         living_modal_spec_li4: "固化时间：约 12–24 小时后即可正常使用（日常防指纹效果几乎立刻显现）",
         living_modal_marketing_title: "营销文案",
         living_modal_marketing_1: "“清洁时间减半，厨房格调加倍。得而固家居涂层，为你找回悠闲时光。”",
-        living_modal_marketing_2: ""在失去之前，先守住新房的洁净。守护全屋的最聪明之选——得而固家居涂层。"",
+        living_modal_marketing_2: "“在失去之前，先守住新房的洁净。守护全屋的最聪明之选——得而固家居涂层。”",
         bike_series_title: "Permacoat 摩托车系列",
         bike_series_desc: "摩托车专用 Permacoat 产品线。",
         car_series_title: "Permacoat 汽车系列",
