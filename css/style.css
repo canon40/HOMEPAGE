@@ -308,6 +308,10 @@ body.dark-theme {
     color: var(--text-muted);
     margin-bottom: 36px;
     letter-spacing: 0.04em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
 }
 
 @keyframes fadeInDown {

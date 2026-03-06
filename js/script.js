@@ -243,6 +243,15 @@ function setLanguage(lang) {
         el.textContent = meta.symbol || "";
     });
 
+    var lineFlags = document.querySelectorAll(".hero-line-flag");
+    lineFlags.forEach(function (el) {
+        el.textContent = meta.flag || "";
+    });
+    var lineSymbols = document.querySelectorAll(".hero-line-symbol");
+    lineSymbols.forEach(function (el) {
+        el.textContent = meta.symbol || "";
+    });
+
     const elements = document.querySelectorAll("[data-i18n]");
 
     elements.forEach((el) => {
