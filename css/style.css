@@ -221,19 +221,22 @@ body.dark-theme {
     cursor: pointer;
 }
 
-/* Hero Section - 항상 노출 유지 (언어/테마 변경 후에도) */
+/* Hero Section - 항상 노출 (AOS/스크립트에 의해 숨겨지지 않음) */
 .hero {
     min-height: 100vh;
     height: 100vh;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     position: relative;
     text-align: center;
-    visibility: visible;
-    opacity: 1;
+    visibility: visible !important;
+    opacity: 1 !important;
     background: url('../images/hero-bg.png') center/cover no-repeat;
     background-color: var(--bg-secondary);
+}
+.hero * {
+    visibility: visible !important;
 }
 
 .hero-overlay {
@@ -245,14 +248,17 @@ body.dark-theme {
     background: linear-gradient(to bottom, rgba(13, 15, 18, 0.6), rgba(13, 15, 18, 0.95));
 }
 
+/* AOS 미적용 - 히어로는 항상 노출 */
+.hero .hero-content,
 .hero-content {
     position: relative;
     z-index: 2;
     max-width: 800px;
     padding: 0 20px;
     animation: fadeInDown 1s ease;
-    visibility: visible;
-    opacity: 1;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 .hero-title {
