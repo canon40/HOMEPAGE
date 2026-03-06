@@ -1,15 +1,15 @@
-/* Reset & Base Variables */
+/* Reset & Base Variables - Indigo theme */
 :root {
     --bg-color: #0d0f12;
     --bg-secondary: #1a1d24;
     --text-main: #f0f2f5;
     --text-muted: #a0aab2;
-    --accent-color: #3b82f6;
-    --accent-hover: #60a5fa;
+    --accent-color: #4f46e5;
+    --accent-hover: #6366f1;
     --glass-bg: rgba(26, 29, 36, 0.6);
     --glass-border: rgba(255, 255, 255, 0.1);
-    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-    --gradient-text: linear-gradient(to right, #60a5fa, #a78bfa);
+    --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    --gradient-text: linear-gradient(to right, #6366f1, #a78bfa);
     --border-radius: 16px;
     --transition-speed: 0.3s;
     --font-sans: 'Inter', 'Noto Sans KR', sans-serif;
@@ -110,12 +110,12 @@ body.dark-theme {
 .btn-primary {
     background: var(--gradient-primary);
     color: white;
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
 }
 
 /* Glassmorphism Panels */
@@ -375,7 +375,7 @@ body.dark-theme {
 
 /* Finder Section */
 .finder-section {
-    background: radial-gradient(circle at top, rgba(148, 163, 255, 0.08), transparent 55%);
+    background: radial-gradient(circle at top, rgba(129, 140, 248, 0.08), transparent 55%);
 }
 
 .finder-layout {
@@ -423,7 +423,7 @@ body.dark-theme {
     background: var(--gradient-primary);
     color: #fff;
     border-color: transparent;
-    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.5);
 }
 
 .finder-result {
@@ -474,7 +474,7 @@ body.dark-theme {
 .btn.btn-outline {
     background: transparent;
     color: var(--accent-hover);
-    border: 1px solid rgba(148, 163, 255, 0.6);
+    border: 1px solid rgba(129, 140, 248, 0.6);
     box-shadow: none;
 }
 
@@ -485,7 +485,7 @@ body.dark-theme {
 
 /* Buyer docs section */
 .buyer-section {
-    background: radial-gradient(circle at top, rgba(59, 130, 246, 0.08), transparent 55%);
+    background: radial-gradient(circle at top, rgba(79, 70, 229, 0.08), transparent 55%);
 }
 
 .download-grid {
