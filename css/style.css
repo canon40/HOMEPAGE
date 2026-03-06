@@ -721,7 +721,8 @@ body.dark-theme {
     position: relative;
 }
 
-.living-modal-country {
+.living-modal-country,
+.series-modal-country {
     display: flex;
     justify-content: flex-end;
     gap: 0.4rem;
@@ -753,6 +754,18 @@ body.dark-theme {
 
 .series-table th {
     background: rgba(255, 255, 255, 0.03);
+}
+
+.buyer-series-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.buyer-series-actions .btn {
+    padding: 6px 14px;
+    font-size: 0.85rem;
 }
 
 .modal-content.finder-modal {
