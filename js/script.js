@@ -164,6 +164,36 @@ runOnReady(() => {
         });
     }
 
+    // Car/Bike series detail modal
+    const seriesModal = document.getElementById('series-modal');
+    const seriesOpenBtns = document.querySelectorAll('.series-modal-open');
+    const seriesClose = seriesModal ? seriesModal.querySelector('.series-close') : null;
+
+    if (seriesModal && seriesOpenBtns.length) {
+        const closeSeries = () => {
+            seriesModal.classList.remove('open');
+        };
+
+        seriesOpenBtns.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                var curLang = document.documentElement.lang || window._currentLang || 'ko';
+                setLanguage(curLang);
+                seriesModal.classList.add('open');
+            });
+        });
+
+        if (seriesClose) {
+            seriesClose.addEventListener('click', closeSeries);
+        }
+
+        seriesModal.addEventListener('click', (e) => {
+            if (e.target === seriesModal) {
+                closeSeries();
+            }
+        });
+    }
+
     // Finder modal
     const finderModal = document.getElementById('finder-modal');
     const finderOpenBtn = document.getElementById('finder-open');

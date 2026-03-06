@@ -276,6 +276,16 @@
                                     <p class="download-desc" data-i18n="buyer_moq_desc">최소 주문 수량 및 단가 정보가 정리된 바이어용 가격표입니다.</p>
                                     <a href="docs/permacoat_moq_price_ko.pdf" class="btn btn-outline" download data-i18n="buyer_download">다운로드</a>
                                 </div>
+
+                                <div class="glass-panel download-card">
+                                    <h3 data-i18n="buyer_series_title">PERMACOAT Car / Bike 비교</h3>
+                                    <p class="download-desc" data-i18n="buyer_series_desc">
+                                        자동차와 바이크의 Quick · Titan · Resin 라인업을 한 번에 비교할 수 있는 바이어용 설명 모달입니다.
+                                    </p>
+                                    <button type="button" class="btn btn-outline series-modal-open" data-i18n="buyer_series_open">
+                                        비교 모달 열기
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -363,6 +373,80 @@
                             <p class="modal-quote" data-i18n="living_modal_marketing_2">
                                 "신축 아파트의 깨끗함, 잃어버리기 전에 지키세요. 집 전체를 위한 가장 스마트한 보험, 듀라코트 리빙코트."
                             </p>
+                        </div>
+                    </div>
+
+                    <!-- Car/Bike Series Detail Modal -->
+                    <div id="series-modal" class="modal-overlay">
+                        <div class="modal-content series-modal glass-panel">
+                            <button type="button" class="modal-close series-close" aria-label="닫기">
+                                &times;
+                            </button>
+                            <h2 class="gradient-text mb-3" data-i18n="series_modal_title">PERMACOAT / DURACOAT 시리즈 비교</h2>
+
+                            <h3 class="mb-2" data-i18n="series_modal_car_title">🏎️ PERMACOAT Car Series</h3>
+                            <p class="modal-pre" data-i18n="series_modal_car_body">
+                                "전문 샵의 퀄리티를 내 차고에서 구현하는 경제적 혁신"
+                                자동차 라인업은 넓은 도장면의 광택 유지와 관리 비용 절감에 초점을 맞춥니다.
+
+                                [Quick] 데일리 케어 솔루션
+                                - 시공의 간편성: 단 40분 만에 전문가 수준의 코팅이 완료되어 예약이나 대기 시간이 필요 없습니다.
+                                - 즉각적인 방오: 시공 즉시 강력한 발수층을 형성하여 비나 먼지로부터 차체를 보호하고 세차를 훨씬 쉽게 만듭니다.
+
+                                [Titan] 장기 보호 솔루션
+                                - 경제적 가치: 수백만 원(1,000~5,000달러 상당)의 전문 시공 비용을 획기적으로 절감하면서도 9H 경도의 강력한 보호막을 제공합니다.
+                                - 압도적 내구성: 한 번의 시공으로 최대 12~24개월간 유지되어 잦은 왁싱이나 코팅의 번거로움을 없애줍니다.
+
+                                [Resin] 쇼카(Show-car) 피니시
+                                - 미러 라이크 광택: 거울처럼 맑은 반사율을 구현하여 차량 본연의 색감을 깊고 풍부하게 살려줍니다.
+                                - 가치 보존: 강력한 UV 차단 효과로 자외선에 의한 도장면 변색을 방지하여 신차 컨디션을 장기간 유지합니다.
+                            </p>
+
+                            <h3 class="mb-2" data-i18n="series_modal_bike_title">🏍️ DURACOAT PermaCoat Bike</h3>
+                            <p class="modal-pre" data-i18n="series_modal_bike_body">
+                                "극한의 열기와 거친 주행을 견디는 퍼포먼스 보호"
+                                바이크 라인업은 엔진의 고온 보호와 정밀 부품의 부식 방지에 초점을 맞춥니다.
+
+                                [Quick] 효율적 레이싱 케어
+                                - 관리 효율 극대화: 유지 관리 시간을 최대 70%까지 단축하여 주행 후 정비 효율을 높여줍니다.
+                                - 레이싱 데이터 검증: 10,000km 내구 테스트를 완료하여 익스트림한 주행 환경에서도 변함없는 보호 성능을 증명했습니다.
+
+                                [Titan] 하이테크 열 차단 솔루션
+                                - 800°C 초고온 내열: 엔진 및 머플러 등 바이크 특유의 고온 부위에서도 코팅층이 파괴되지 않고 완벽하게 보호합니다.
+                                - 9H 나노 세라믹: 스톤 칩이나 주행 중 발생하는 미세 스크래치로부터 페인트와 크롬 파츠를 견고하게 지켜줍니다.
+
+                                [Resin] 정밀 디테일링 솔루션
+                                - 분자 수준 침투: 복잡한 구조와 미세한 표면까지 나노 입자가 침투하여 광택을 극대화합니다.
+                                - 금속 산화 방지: 엔진 주변부와 크롬 파츠의 산화 및 부식을 효과적으로 억제하여 바이크의 프리미엄 가치를 유지합니다.
+                            </p>
+
+                            <h3 class="mb-2" data-i18n="series_modal_table_title">📊 바이어용 비교 요약</h3>
+                            <table class="series-table">
+                                <thead>
+                                    <tr>
+                                        <th data-i18n="series_modal_tbl_grade">구분</th>
+                                        <th data-i18n="series_modal_tbl_car">Car (자동차) 장점</th>
+                                        <th data-i18n="series_modal_tbl_bike">Bike (바이크) 장점</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Quick</td>
+                                        <td data-i18n="series_modal_tbl_quick_car">40분 완성, 비용 절감</td>
+                                        <td data-i18n="series_modal_tbl_quick_bike">관리 시간 70% 단축</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Titan</td>
+                                        <td data-i18n="series_modal_tbl_titan_car">9H 경도, 2년 지속 보호</td>
+                                        <td data-i18n="series_modal_tbl_titan_bike">800°C 내열, 엔진/머플러 보호</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Resin</td>
+                                        <td data-i18n="series_modal_tbl_resin_car">미러 광택, 도장면 가치 보존</td>
+                                        <td data-i18n="series_modal_tbl_resin_bike">나노 정밀 코팅, 금속 산화 방지</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
