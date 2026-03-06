@@ -212,7 +212,11 @@ function setLanguage(lang) {
     // Update document lang attribute
     document.documentElement.lang = lang;
     var sel = document.getElementById("language-select");
-    if (sel) sel.value = lang;
+    if (sel) {
+        sel.value = lang;
+        var label = document.getElementById("language-select-label");
+        if (label && sel.options[sel.selectedIndex]) label.textContent = sel.options[sel.selectedIndex].text;
+    }
 
     // Finder 결과 텍스트도 현재 언어에 맞게 다시 계산
     if (typeof updateFinderResult === 'function') {

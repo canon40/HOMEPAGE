@@ -1,14 +1,14 @@
 const translations = {
     ko: {
-        nav_home: "홈",
-        nav_products: "제품 라인업",
+        nav_home: "집",
+        nav_products: "제품",
         nav_finder: "코팅제 추천",
         nav_buyer: "바이어 자료실",
         nav_living: "듀라코트 리빙코트",
         nav_language_label: "언어",
         hero_title: "퍼마코트 시리즈 3종",
-        hero_subtitle: "궁극의 표면 보호를 위한 하이엔드 코팅 솔루션",
-        btn_explore: "제품 보기",
+        hero_subtitle: "표면 보호를 위한 최고의 고급 코팅 솔루션",
+        btn_explore: "제품 살펴보기",
         prod_title: "프리미엄 라인업",
         premium_bike: "퍼마코트 바이크",
         premium_car: "퍼마코트 자동차",
