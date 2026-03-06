@@ -154,6 +154,17 @@ body.dark-theme {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .logo-mark {
+    height: 28px;
+    width: auto;
+}
+
 .navbar .logo span {
     font-size: 1.5rem;
     font-weight: 800;
@@ -312,6 +323,11 @@ body.dark-theme {
     align-items: center;
     justify-content: center;
     gap: 0.45rem;
+}
+
+.hero-line-flag,
+.hero-line-symbol {
+    font-size: 1.15rem;
 }
 
 @keyframes fadeInDown {
