@@ -37,6 +37,10 @@ function initPage() {
     }
     setLanguage(savedLang);
     window._currentLang = savedLang;
+    // DOM이 완전히 준비된 뒤 한 번 더 적용 (다국어 누락 방지)
+    if (typeof requestAnimationFrame !== "undefined") {
+        requestAnimationFrame(function () { setLanguage(window._currentLang || savedLang); });
+    }
 
     // Event Listener for select
     if (langSelect) {
@@ -193,7 +197,7 @@ function setLanguage(lang) {
     if (!lang) lang = "ko";
     applyTheme(lang);
 
-    if (!translations[lang]) return;
+    if (typeof translations === "undefined" || !translations[lang]) return;
 
     const dic = translations[lang];
     const elements = document.querySelectorAll("[data-i18n]");
