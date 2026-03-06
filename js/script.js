@@ -212,16 +212,27 @@ function setLanguage(lang) {
     // Update document lang attribute
     document.documentElement.lang = lang;
     var sel = document.getElementById("language-select");
-    if (sel) {
-        sel.value = lang;
-        var label = document.getElementById("language-select-label");
-        if (label && sel.options[sel.selectedIndex]) label.textContent = sel.options[sel.selectedIndex].text;
-    }
+    if (sel) sel.value = lang;
 
     // Finder 결과 텍스트도 현재 언어에 맞게 다시 계산
     if (typeof updateFinderResult === 'function') {
         updateFinderResult();
     }
+
+    // 히어로 섹션이 항상 보이도록 유지 (언어/테마 변경 후에도)
+    var hero = document.querySelector('.hero');
+    var heroContent = document.querySelector('.hero-content');
+    if (hero) {
+        hero.style.display = '';
+        hero.style.visibility = 'visible';
+        hero.style.opacity = '1';
+    }
+    if (heroContent) {
+        heroContent.style.display = '';
+        heroContent.style.visibility = 'visible';
+        heroContent.style.opacity = '1';
+    }
+    if (typeof AOS !== 'undefined' && AOS.refresh) AOS.refresh();
 }
 
 function updateFinderResult() {

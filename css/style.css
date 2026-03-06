@@ -221,15 +221,17 @@ body.dark-theme {
     cursor: pointer;
 }
 
-/* Hero Section */
+/* Hero Section - 항상 노출 유지 (언어/테마 변경 후에도) */
 .hero {
+    min-height: 100vh;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     text-align: center;
-    /* Placeholder fallback */
+    visibility: visible;
+    opacity: 1;
     background: url('../images/hero-bg.png') center/cover no-repeat;
     background-color: var(--bg-secondary);
 }
@@ -249,6 +251,8 @@ body.dark-theme {
     max-width: 800px;
     padding: 0 20px;
     animation: fadeInDown 1s ease;
+    visibility: visible;
+    opacity: 1;
 }
 
 .hero-title {
