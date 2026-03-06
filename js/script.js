@@ -249,8 +249,11 @@ function setLanguage(lang) {
         const key = el.getAttribute("data-i18n");
         if (!key) return;
 
-        // 1차: 현재 언어, 2차: 한국어(ko) fallback
-        const value = dic[key] ?? (translations.ko ? translations.ko[key] : undefined);
+        // 1차: 현재 언어, 2차: 영어(en), 3차: 한국어(ko) fallback
+        const value =
+            dic[key] ??
+            (translations.en ? translations.en[key] : undefined) ??
+            (translations.ko ? translations.ko[key] : undefined);
         if (value !== undefined) {
             el.textContent = value;
         }
