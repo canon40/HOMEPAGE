@@ -234,6 +234,15 @@ function setLanguage(lang) {
         el.textContent = meta.symbol || "";
     });
 
+    var heroFlags = document.querySelectorAll(".hero-country-flag");
+    heroFlags.forEach(function (el) {
+        el.textContent = meta.flag || "";
+    });
+    var heroSymbols = document.querySelectorAll(".hero-country-symbol");
+    heroSymbols.forEach(function (el) {
+        el.textContent = meta.symbol || "";
+    });
+
     const elements = document.querySelectorAll("[data-i18n]");
 
     elements.forEach((el) => {

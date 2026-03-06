@@ -256,6 +256,24 @@ body.dark-theme {
     background: linear-gradient(to bottom, rgba(13, 15, 18, 0.6), rgba(13, 15, 18, 0.95));
 }
 
+.hero-country-layer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.18;
+    filter: blur(6px);
+}
+
+.hero-country-layer .hero-country-flag,
+.hero-country-layer .hero-country-symbol {
+    font-size: clamp(4rem, 18vw, 9rem);
+    margin: 0 0.25em;
+}
+
 /* AOS 미적용 - 히어로는 항상 노출 */
 .hero .hero-content,
 .hero-content {
