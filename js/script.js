@@ -37,9 +37,17 @@ function initPage() {
     }
     setLanguage(savedLang);
     window._currentLang = savedLang;
-    // DOM이 완전히 준비된 뒤 한 번 더 적용 (다국어 누락 방지)
+    // DOM 준비 후 한 번 더 적용 (다국어·나라별 색상 확실 반영)
+    setTimeout(function () {
+        var cur = window._currentLang || localStorage.getItem("siteLang") || "ko";
+        applyTheme(cur);
+        setLanguage(cur);
+    }, 0);
     if (typeof requestAnimationFrame !== "undefined") {
-        requestAnimationFrame(function () { setLanguage(window._currentLang || savedLang); });
+        requestAnimationFrame(function () {
+            var cur = window._currentLang || savedLang;
+            setLanguage(cur);
+        });
     }
 
     // Event Listener for select
@@ -197,9 +205,9 @@ function setLanguage(lang) {
     if (!lang) lang = "ko";
     applyTheme(lang);
 
-    if (typeof translations === "undefined" || !translations[lang]) return;
-
-    const dic = translations[lang];
+    if (typeof translations === "undefined") return;
+    if (!translations[lang]) lang = "ko";
+    var dic = translations[lang];
     const elements = document.querySelectorAll("[data-i18n]");
 
     elements.forEach((el) => {

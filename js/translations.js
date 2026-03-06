@@ -129,7 +129,14 @@ const translations = {
         buyer_manual_desc: "제품 사용법과 시공 가이드를 정리한 바이어용 사용설명서입니다.",
         buyer_moq_title: "MOQ 단가표",
         buyer_moq_desc: "최소 주문 수량 및 단가 정보가 정리된 바이어용 가격표입니다.",
-        buyer_download: "다운로드"
+        buyer_download: "다운로드",
+        footer_copyright: "© 2026 PERMACOAT. All rights reserved.",
+        quick_desc_bike: "라이딩 후 간편 분사·도포만으로 즉각적인 슬릭감과 발수를 부여해 오염과 먼지 고착을 줄여 주는 바이크 전용 퀵 코팅제입니다. 복잡한 부품과 열에 민감한 바이크 특성을 고려해, 엔진 주변과 하부까지 빠르게 메인터넌스할 수 있도록 설계되었습니다.",
+        titan_desc_bike: "극한 주행 환경과 엔진 고열, 연료 튐까지 견디도록 설계된 올라운더 프리미엄 코팅으로, 7H 고경도 보호막과 최대 300°C 내열성이 니그립 부위와 엔진 커버, 머플러 주변의 스크래치와 열변색을 효과적으로 막아 줍니다. 휘발유와 강한 세정제에도 강한 내화학성을 지녀 바이크 도장면을 오래 안정적으로 지켜 줍니다.",
+        resin_desc_bike: "퍼마코트 바이크 라인업의 하이엔드 플래그십 등급으로, 폴리실라잔 60%와 레진 30%가 화학적으로 결합해 9H+ 다이아몬드급 유리막을 형성합니다. 최대 600°C까지 버티는 초고온 내열성과 프레임 깊숙한 부식 방지 성능으로 엔진 열기와 머플러 주변, 기계 구조 전반을 무결점 아머처럼 감싸 줍니다.",
+        quick_desc_car: "셀프 세차 후 분사·도포만으로 보닛과 도장면 전체에 균일한 유리알 광택과 발수를 입혀 주는 자동차 전용 퀵 코팅제입니다. 넓은 면적을 구역별로 빠르게 시공할 수 있어 워터스팟과 일상 오염을 줄이고, 다음 세차까지 깔끔한 상태를 오래 유지하도록 도와줍니다.",
+        titan_desc_car: "사계절 야외 주차와 일상 주행 오염으로부터 차를 지키는 딥 글로스 쉴드 등급으로, 7H 고경도 피막이 세차 기스를 줄이고 강력한 UV 차단이 본닛과 루프의 도장 노화를 늦춰 줍니다. 하이엔드 비딩 성능으로 비가 온 뒤에도 워터스팟이 덜 생기며, 유리알처럼 깊은 광택이 오랫동안 유지되도록 돕습니다.",
+        resin_desc_car: "퍼마코트 자동차 라인업의 정점에 위치한 하이엔드 플래그십 코팅으로, 폴리실라잔 60%와 레진 30%가 도장면과 화학적으로 결합해 가장 두껍고 단단한 9H+ 유리막을 만들어 줍니다. 3년 이상 지속되는 하이퍼 글로스 광택과 강력한 UV 차단, 초발수 셀프 클리닝 효과로 도장 산화와 워터스팟, 스톤칩 데미지를 최소화해 매일 아침 새 차 같은 컨디션을 유지해 줍니다."
     },
     en: {
         nav_home: "Home",
@@ -261,7 +268,14 @@ const translations = {
         buyer_manual_desc: "Buyer manual with product usage and application guide.",
         buyer_moq_title: "MOQ Price List",
         buyer_moq_desc: "Buyer price list with minimum order quantity and unit prices.",
-        buyer_download: "Download"
+        buyer_download: "Download",
+        footer_copyright: "© 2026 PERMACOAT. All rights reserved.",
+        quick_desc_bike: "Less hassle in maintenance, more of that new-car thrill. Instant slickness and shine with a simple spray and wipe. Bike-specific quick coating for easy application on engine areas and underbody.",
+        titan_desc_bike: "A solid shield that overwhelms daily scratches. 7H hardness and up to 300°C heat resistance protect grips, engine cover, and muffler from scratches and discoloration. Strong chemical resistance for long-lasting bike paint protection.",
+        resin_desc_bike: "The pinnacle of professional coating for bikes. Polysilazane 60% and resin 30% form a 9H+ glass-like layer. Extreme heat resistance up to 600°C and deep corrosion protection for engine heat and muffler areas.",
+        quick_desc_car: "After wash, spray and wipe for even gloss and water repellency on hood and paint. Quick coating for cars; reduces water spots and keeps the car clean until the next wash.",
+        titan_desc_car: "Deep gloss shield for all-season outdoor parking and daily driving. 7H film reduces wash scratches; strong UV protection slows paint aging on hood and roof. Fewer water spots and long-lasting glass-like shine.",
+        resin_desc_car: "Flagship car coating. Polysilazane 60% and resin 30% form the thickest 9H+ glass layer. Over 3 years of hyper gloss, strong UV block, and self-cleaning effect for minimal oxidation, water spots, and stone chips."
     },
     ja: {
         nav_home: "ホーム",
@@ -393,7 +407,14 @@ const translations = {
         buyer_manual_desc: "製品の使い方と施工ガイドをまとめたバイヤー向け説明書です。",
         buyer_moq_title: "MOQ単価表",
         buyer_moq_desc: "最小ロットと単価をまとめたバイヤー向け価格表です。",
-        buyer_download: "ダウンロード"
+        buyer_download: "ダウンロード",
+        footer_copyright: "© 2026 PERMACOAT. All rights reserved.",
+        quick_desc_bike: "メンテナンスの手間を省き、新車の感動をさらに。スプレーして拭き取るだけで完成する即効性のある滑らかさと光沢。バイク用クイックコーティング。",
+        titan_desc_bike: "日常のスクラッチを圧倒する強固な盾。7H硬度・最大300°C耐熱でニグリップ・エンジンカバー・マフラー周りを保護。バイク塗装を長く安定して守ります。",
+        resin_desc_bike: "バイクラインのハイエンドフラッグシップ。ポリシラザン60%とレジン30%で9H+ガラス膜を形成。最大600°C耐熱でエンジン熱・マフラー周りをアーマーのように保護。",
+        quick_desc_car: "セルフ洗車後、スプレー＆拭きでボンネット・塗装面に均一な光沢と撥水。車用クイックコーティング。ウォータースポットと汚れを抑え、次の洗車までキレイを維持。",
+        titan_desc_car: "四季の屋外駐車と日常走行の汚れから車を守るディープグロスシールド。7H皮膜で洗車キズを軽減、強力UVカットでボンネット・ルーフの塗装劣化を遅延。",
+        resin_desc_car: "車ラインの頂点となるハイエンドフラッグシップ。ポリシラザン60%とレジン30%で最厚・最硬の9H+ガラス膜。3年以上のハイパーグロスと強力UVカット・セルフクリーニング効果。"
     },
     vi: {
         nav_home: "Trang Chủ",
@@ -525,7 +546,14 @@ const translations = {
         buyer_manual_desc: "Hướng dẫn sử dụng và thi công dành cho buyer.",
         buyer_moq_title: "Bảng giá MOQ",
         buyer_moq_desc: "Bảng giá dành cho buyer với số lượng tối thiểu và đơn giá.",
-        buyer_download: "Tải xuống"
+        buyer_download: "Tải xuống",
+        footer_copyright: "© 2026 PERMACOAT. All rights reserved.",
+        quick_desc_bike: "Giảm bớt sự phiền toái khi bảo dưỡng, tăng thêm cảm giác như xe mới. Độ bóng trơn láng tức thì chỉ với xịt và lau. Coating nhanh dành cho xe máy.",
+        titan_desc_bike: "Tấm khiên vững chắc đánh bại các vết xước hàng ngày. Độ cứng 7H, chịu nhiệt đến 300°C bảo vệ tay nắm, nắp động cơ, ống xả. Bảo vệ sơn xe máy bền lâu.",
+        resin_desc_bike: "Đỉnh cao coating chuyên nghiệp cho xe máy. Polysilazane 60% và resin 30% tạo lớp 9H+. Chịu nhiệt cực cao 600°C, chống ăn mòn sâu cho vùng động cơ và ống xả.",
+        quick_desc_car: "Sau khi rửa xe, xịt và lau để có độ bóng và chống nước đều trên capô và sơn. Coating nhanh cho ô tô; giảm vết nước và giữ xe sạch đến lần rửa tiếp theo.",
+        titan_desc_car: "Lớp bảo vệ bóng sâu cho đỗ ngoài trời quanh năm và lái hàng ngày. Màng 7H giảm xước khi rửa; chặn UV mạnh làm chậm lão hóa sơn trên capô và nóc.",
+        resin_desc_car: "Coating flagship cho ô tô. Polysilazane 60% và resin 30% tạo lớp kính 9H+ dày và cứng nhất. Hơn 3 năm bóng hyper, chặn UV mạnh, hiệu ứng tự làm sạch."
     },
     zh: {
         nav_home: "主页",
@@ -657,7 +685,14 @@ const translations = {
         buyer_manual_desc: "面向买家的产品用法与施工指南。",
         buyer_moq_title: "MOQ 单价表",
         buyer_moq_desc: "面向买家的最低订购量与单价表。",
-        buyer_download: "下载"
+        buyer_download: "下载",
+        footer_copyright: "© 2026 PERMACOAT. All rights reserved.",
+        quick_desc_bike: "省去维护烦恼，更添新车般的惊喜。喷涂擦拭即可呈现即刻柔滑感与光泽。摩托车专用快涂。",
+        titan_desc_bike: "能够抵挡日常划痕的坚固盾牌。7H硬度、最高300°C耐热，保护握把、发动机盖、排气周边。强耐化学性，长久保护摩托车漆面。",
+        resin_desc_bike: "摩托车系列高端旗舰。聚硅氮烷60%与树脂30%形成9H+玻璃膜。最高600°C耐高温，对发动机热与排气周边提供全面防腐保护。",
+        quick_desc_car: "洗车后喷涂擦拭，为引擎盖与漆面带来均匀光泽与拨水。轿车专用快涂；减少水渍与日常污渍，保持清洁直至下次洗车。",
+        titan_desc_car: "四季户外停放与日常行驶污渍防护的深色光泽盾。7H膜减少洗车划痕；强效UV阻隔延缓引擎盖与车顶漆面老化。",
+        resin_desc_car: "轿车系列旗舰涂层。聚硅氮烷60%与树脂30%形成最厚最硬的9H+玻璃层。三年以上超光泽、强UV阻隔与自清洁效果。"
     },
     it: {
         nav_home: "Home",
@@ -753,7 +788,14 @@ const translations = {
         buyer_manual_desc: "Manuale per buyer con uso prodotto e guida applicazione.",
         buyer_moq_title: "Listino MOQ",
         buyer_moq_desc: "Listino prezzi per buyer con quantità minime e prezzi unitari.",
-        buyer_download: "Scarica"
+        buyer_download: "Scarica",
+        footer_copyright: "© 2026 PERMACOAT. All rights reserved.",
+        quick_desc_bike: "Meno fatica nella cura, più sensazione di veicolo nuovo. Slick immediato e brillantezza con spruzza e pulisci. Coating rapido per moto.",
+        titan_desc_bike: "Uno scudo solido che protegge dai graffi quotidiani. Durezza 7H e resistenza al calore fino a 300°C per proteggere manopole, coprimotore, marmitta. Protezione vernice moto a lungo.",
+        resin_desc_bike: "Il vertice del coating professionale per moto. Polisilazane 60% e resina 30% formano uno strato 9H+. Resistenza al calore fino a 600°C e protezione dalla corrosione.",
+        quick_desc_car: "Dopo il lavaggio, spruzza e pulisci per lucentezza e idrorepellenza uniformi su cofano e vernice. Coating rapido per auto; riduce water spot e mantiene l'auto pulita.",
+        titan_desc_car: "Scudo deep gloss per parcheggio all'aperto e guida quotidiana. Film 7H riduce i graffi da lavaggio; forte protezione UV per cofano e tetto.",
+        resin_desc_car: "Coating flagship per auto. Polisilazane 60% e resina 30% formano lo strato 9H+ più spesso e duro. Oltre 3 anni di iper lucentezza e effetto autopulente."
     },
     fr: {
         nav_home: "Accueil",
@@ -849,7 +891,14 @@ const translations = {
         buyer_manual_desc: "Manuel acheteur avec mode d'emploi et guide d'application.",
         buyer_moq_title: "Grille tarifaire MOQ",
         buyer_moq_desc: "Grille acheteur avec quantités minimales et prix unitaires.",
-        buyer_download: "Télécharger"
+        buyer_download: "Télécharger",
+        footer_copyright: "© 2026 PERMACOAT. All rights reserved.",
+        quick_desc_bike: "Moins de contraintes d'entretien, plus de sensations de véhicule neuf. Brillance et glisse immédiates. Coating rapide pour moto.",
+        titan_desc_bike: "Un bouclier solide contre les micro-rayures. Dureté 7H et résistance à la chaleur jusqu'à 300°C pour protéger poignées, carter, échappement. Protection peinture moto durable.",
+        resin_desc_bike: "Le sommet du coating professionnel pour moto. Polysilazane 60% et résine 30% forment une couche 9H+. Résistance à la chaleur jusqu'à 600°C.",
+        quick_desc_car: "Après lavage, vaporiser et essuyer pour brillance et hydrofugation sur capot et peinture. Coating rapide pour auto; réduit les water spots.",
+        titan_desc_car: "Bouclier deep gloss pour stationnement extérieur et conduite quotidienne. Film 7H réduit les micro-rayures; forte protection UV pour capot et toit.",
+        resin_desc_car: "Coating flagship pour auto. Polysilazane 60% et résine 30% forment la couche 9H+ la plus épaisse. Plus de 3 ans d'hyper brillance et d'effet auto-nettoyant."
     },
     am: {
         nav_home: "መነሻ",
@@ -944,7 +993,14 @@ const translations = {
         buyer_manual_desc: "ለገዢ የምርት አጠቃቀም እና የመተግበሪያ መመሪያ።",
         buyer_moq_title: "MOQ ዋጋ ሠንጠረዥ",
         buyer_moq_desc: "ለገዢ ዝቅተኛ ትዕዛዝ እና የአሃድ ዋጋ።",
-        buyer_download: "አውርድ"
+        buyer_download: "አውርድ",
+        footer_copyright: "© 2026 PERMACOAT. All rights reserved.",
+        quick_desc_bike: "የጥገና ጉዳይ ቀላል፣ የአዲስ መኪና ስሜት። ቀላል መርጨት እና ማስረጨት ብቻ ፈጣን ግልጽነት። ለባይክ ፈጣን ኮቲንግ።",
+        titan_desc_bike: "ጠንካራ ታርክ የቀንድ ጉድፍን ይከላከላል። 7H ጠንካራነት እና እስከ 300°C ድረስ የሙቀት መቋቋም። ለባይክ ቀለም ረዥም ጊዜ ጥበቃ።",
+        resin_desc_bike: "ለባይክ የፕሮፌሽናል ኮቲንግ ከፍተኛው። ፖሊሲላዘን 60% እና ረዚን 30% 9H+ መስታወት ሽፋን ይፈጥራሉ። እስከ 600°C ድረስ የሙቀት መቋቋም።",
+        quick_desc_car: "ከመታጠብ በኋላ መርጨት እና ማስረጨት በካፕ እና በቀለም ላይ እኩል ግልጽነት። ለመኪና ፈጣን ኮቲንግ።",
+        titan_desc_car: "የወቅት ውጫዊ ማቆሚያ እና ዕለታዊ መንዳት ጥበቃ። 7H ፊልም የመታጠብ ቁርስ ያሳነሳል። ጠንካራ የUV መከላከል።",
+        resin_desc_car: "ለመኪና የፕሮፌሽናል ኮቲንግ ከፍተኛው። ፖሊሲላዘን 60% እና ረዚን 30% የሚጠናክረው 9H+ መስታወት። ከ3 ዓመት በላይ ግልጽነት።"
     },
     ar: {
         nav_home: "الرئيسية",
@@ -1040,7 +1096,14 @@ const translations = {
         buyer_manual_desc: "دليل المشتري لطريقة الاستخدام ودليل التطبيق.",
         buyer_moq_title: "جدول أسعار MOQ",
         buyer_moq_desc: "جدول المشتري بكميات الحد الأدنى للطلب والأسعار.",
-        buyer_download: "تحميل"
+        buyer_download: "تحميل",
+        footer_copyright: "© 2026 PERMACOAT. All rights reserved.",
+        quick_desc_bike: "صيانة أقل، إحساس أكبر بالجدة. لمعان وانسيابية فورية برشّة ومسحة. طلاء سريع للدراجات النارية.",
+        titan_desc_bike: "درع قوي يتغلب على الخدوش اليومية. صلابة 7H ومقاومة حرارة حتى 300°C لحماية المقابض وغلاف المحرك والعادم. حماية طويلة الأمد لطلاء الدراجة.",
+        resin_desc_bike: "قمة الطلاء الاحترافي للدراجات. بوليسيلزان 60% وريزين 30% يشكلان طبقة 9H+. مقاومة حرارة حتى 600°C وحماية من التآكل.",
+        quick_desc_car: "بعد الغسيل، رشّ وامسح لللمعان والطاردية للماء على الغطاء والطلاء. طلاء سريع للسيارات؛ يقلل بقع الماء ويبقي السيارة نظيفة.",
+        titan_desc_car: "درع لمعان عميق للوقوف في الخارج والقيادة اليومية. فيلم 7H يقلل خدوش الغسيل؛ حماية قوية من الأشعة فوق البنفسجية للغطاء والسقف.",
+        resin_desc_car: "طلاء فلاغشيب للسيارات. بوليسيلزان 60% وريزين 30% يشكلان أقوى طبقة 9H+. أكثر من 3 سنوات لمعان فائق وتأثير ذاتي التنظيف."
     },
     de: {
         nav_home: "Start",
@@ -1172,6 +1235,13 @@ const translations = {
         buyer_manual_desc: "Einkäufer-Anleitung mit Produktnutzung und Applikationsanleitung.",
         buyer_moq_title: "MOQ-Preisliste",
         buyer_moq_desc: "Einkäufer-Preisliste mit Mindestbestellmenge und Stückpreisen.",
-        buyer_download: "Download"
+        buyer_download: "Download",
+        footer_copyright: "© 2026 PERMACOAT. All rights reserved.",
+        quick_desc_bike: "Weniger Pflegeaufwand, mehr Neuwagen-Gefühl. Sofortiger Glanz und Gleitfähigkeit mit Sprühen und Wischen. Schnellbeschichtung für Motorräder.",
+        titan_desc_bike: "Ein starkes Schutzschild gegen Alltagskratzer. 7H-Härte und bis zu 300°C Hitzebeständigkeit für Griffe, Motorabdeckung, Auspuff. Lang anhaltender Lackschutz fürs Motorrad.",
+        resin_desc_bike: "Die Spitze der professionellen Beschichtung für Motorräder. Polysilazan 60% und Harz 30% bilden eine 9H+-Glasschicht. Extreme Hitzebeständigkeit bis 600°C.",
+        quick_desc_car: "Nach dem Waschen sprühen und wischen für gleichmäßigen Glanz und Wasserabweisung auf Haube und Lack. Schnellbeschichtung für Pkw; weniger Wasserflecken, lange sauber.",
+        titan_desc_car: "Deep-Gloss-Schutz für Außenparken und Alltagsfahrten. 7H-Film reduziert Waschkratzer; starker UV-Schutz für Haube und Dach.",
+        resin_desc_car: "Flagship-Beschichtung für Pkw. Polysilazan 60% und Harz 30% bilden die dickste und härteste 9H+-Glasschicht. Über 3 Jahre Hyper-Glanz und Selbstreinigungseffekt."
     }
 };
