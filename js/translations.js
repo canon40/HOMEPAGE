@@ -487,23 +487,29 @@ const translations = {
         living_modal_marketing_1: "\"Thời gian dọn dẹp giảm một nửa, đẳng cấp gian bếp tăng gấp đôi. Duracoat Living Coat mang lại cho bạn khoảng thời gian rảnh rỗi quý giá.\"",
         living_modal_marketing_2: "\"Giữ lại sự sạch sẽ như nhà mới trước khi nó biến mất. Giải pháp bảo vệ thông minh nhất cho toàn bộ ngôi nhà – Duracoat Living Coat.\"",
 
+        // 모달 제목 및 테이블 헤더
         series_modal_title: "So sánh series PERMACOAT / DURACOAT",
+        series_modal_table_title: "📊 Tóm tắt so sánh cho người mua (Summary)",
+
+        // 자동차 시리즈 (Car Series)
         series_modal_car_title: "🏎️ PERMACOAT Car Series (Dành cho Ô tô)",
         series_modal_car_body:
-            "\"Chất lượng xưởng chuyên nghiệp, thực hiện tiết kiệm ngay tại gara của bạn.\"\nDòng sản phẩm dành cho ô tô tập trung vào việc duy trì độ bóng trên diện tích sơn lớn đồng thời giảm chi phí bảo trì liên tục.\n\n[Quick] Giải pháp chăm sóc hàng ngày\n- Thi công dễ dàng: Hoàn thành lớp phủ cấp độ chuyên nghiệp trong khoảng 40 phút, không cần đặt lịch trước hay chờ đợi lâu.\n- Bảo vệ tức thì: Hình thành lớp kỵ nước mạnh mẽ ngay lập tức, bảo vệ thân xe khỏi mưa bụi và giúp việc rửa xe trở nên dễ dàng hơn nhiều.\n\n[Titan] Giải pháp bảo vệ dài hạn\n- Giá trị kinh tế: Giảm đáng kể chi phí phủ chuyên nghiệp (thường từ $1,000–$5,000+) trong khi vẫn cung cấp hàng rào độ cứng 9H mạnh mẽ.\n- Độ bền vượt trội: Một lần thi công có thể kéo dài 12–24 tháng, loại bỏ sự phiền phức khi phải tẩy wax hoặc phủ lại thường xuyên.\n\n[Resin] Lớp hoàn thiện Show-car\n- Độ bóng như gương: Mang lại sự phản chiếu trong suốt như pha lê, làm nổi bật màu sơn sâu và phong phú.\n- Giữ gìn giá trị: Khả năng chặn tia UV mạnh mẽ giúp ngăn ngừa phai màu và giữ cho xe luôn trong tình trạng như mới trong thời gian dài.",
+            "\"Chất lượng xưởng chuyên nghiệp, thực hiện tiết kiệm ngay tại gara của bạn.\"\nDòng sản phẩm dành cho ô tô tập trung vào việc duy trì độ bóng trên diện tích sơn lớn đồng thời giảm chi phí bảo trì liên tục.\n\n[Quick] Giải pháp chăm sóc hàng ngày\n- Thi công dễ dàng: Hoàn thành lớp phủ cấp độ chuyên nghiệp trong khoảng 40 phút.\n- Bảo vệ tức thì: Hình thành lớp kỵ nước mạnh mẽ, bảo vệ thân xe khỏi mưa bụi.\n\n[Titan] Giải pháp bảo vệ dài hạn\n- Giá trị kinh tế: Giảm đáng kể chi phí phủ chuyên nghiệp ($1,000–$5,000+) với độ cứng 9H.\n- Độ bền vượt trội: Duy trì 12–24 tháng, không cần tẩy wax thường xuyên.\n\n[Resin] Lớp hoàn thiện Show-car\n- Độ bóng như gương: Mang lại sự phản chiếu trong suốt như pha lê, làm nổi bật màu sơn.\n- Giữ gìn giá trị: Khả năng chặn tia UV mạnh mẽ giúp ngăn ngừa phai màu.",
+
+        // 바이크 시리즈 (Bike Series)
         series_modal_bike_title: "🏍️ DURACOAT PermaCoat Bike (Dành cho Xe máy)",
         series_modal_bike_body:
-            "\"Hiệu năng bảo vệ chịu được nhiệt độ cực cao và phong cách lái xe mạnh mẽ.\"\nDòng sản phẩm xe máy tập trung vào việc bảo vệ động cơ ở nhiệt độ cao và chống ăn mòn cho các linh kiện chính xác.\n\n[Quick] Chăm sóc đường đua hiệu quả\n- Tối đa hóa hiệu suất bảo trì: Cắt giảm thời gian bảo trì sau khi lái xe lên đến 70%, cải thiện năng suất làm việc.\n- Dữ liệu chứng minh từ đường đua: Thử nghiệm độ bền 10.000 km xác nhận sự bảo vệ ổn định ngay cả trong điều kiện lái xe khắc nghiệt.\n\n[Titan] Giải pháp lá chắn nhiệt công nghệ cao\n- Chịu nhiệt lên đến 800°C: Bảo vệ lớp phủ xung quanh động cơ và ống xả nơi nhiệt độ cực cao.\n- Nano-ceramic 9H: Bảo vệ mạnh mẽ các bộ phận sơn và chrome khỏi đá văng và các vết xước nhỏ trong khi lái xe.\n\n[Resin] Giải pháp chăm sóc chi tiết chính xác\n- Thâm nhập cấp độ phân tử: Các hạt nano tiếp cận các hình dạng phức tạp và kết cấu vi mô để tối đa hóa độ bóng.\n- Kiểm soát oxy hóa kim loại: Ngăn chặn hiệu quả sự oxy hóa và ăn mòn xung quanh động cơ và các bộ phận chrome để duy trì giá trị xe cao cấp.",
-        series_modal_table_title: "📊 Tóm tắt so sánh cho người mua",
+            "\"Hiệu năng bảo vệ chịu được nhiệt độ cực cao 및 phong cách lái xe mạnh mẽ.\"\nDòng sản phẩm xe máy tập trung bảo vệ động cơ ở nhiệt độ cao 및 chống ăn mòn.\n\n[Quick] Chăm sóc đường đua hiệu quả\n- Tối đa hóa bảo trì: Cắt giảm thời gian bảo trì đến 70%.\n- Dữ liệu đường đua: Thử nghiệm độ bền 10.000 km ổn định.\n\n[Titan] Giải pháp lá chắn nhiệt\n- Chịu nhiệt đến 800°C: Bảo vệ lớp phủ quanh động cơ 및 ống xả.\n- Nano-ceramic 9H: Bảo vệ mạnh mẽ khỏi đá văng 및 trầy xước.\n\n[Resin] Chăm sóc chi tiết chính xác\n- Thâm nhập phân tử: Hạt nano tối đa hóa độ bóng trên kết cấu phức tạp.\n- Kiểm soát oxy hóa: Ngăn chặn ăn mòn quanh động cơ 및 chrome.",
         series_modal_tbl_grade: "Cấp độ",
         series_modal_tbl_car: "Ưu điểm cho ô tô",
         series_modal_tbl_bike: "Ưu điểm cho xe máy",
+        // 비교 표(Table) 내부 데이터
         series_modal_tbl_quick_car: "Hoàn thiện trong 40 phút, tiết kiệm chi phí",
         series_modal_tbl_quick_bike: "Giảm thời gian bảo dưỡng đến 70%",
         series_modal_tbl_titan_car: "Độ cứng 9H, bảo vệ lên đến 2 năm",
         series_modal_tbl_titan_bike: "Chịu nhiệt 800°C, bảo vệ động cơ/ống xả",
         series_modal_tbl_resin_car: "Bóng như gương, giữ giá trị bề mặt sơn",
-        series_modal_tbl_resin_bike: "Phủ nano chính xác, hạn chế oxy hóa kim loại"
+        series_modal_tbl_resin_bike: "Coating nano chính xác, hạn chế oxy hóa kim loại"
     },
     zh: {
         nav_home: "主页",
