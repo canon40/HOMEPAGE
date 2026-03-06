@@ -198,6 +198,14 @@ body.dark-theme {
     white-space: nowrap;
 }
 
+.lang-selector .lang-flag {
+    font-size: 1.1rem;
+}
+
+.lang-selector .lang-symbol {
+    font-size: 1rem;
+}
+
 .lang-selector select {
     background: transparent;
     color: var(--text-main);

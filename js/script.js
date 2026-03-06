@@ -12,6 +12,20 @@ var themeByLang = {
     ar: { accent: "#006C35", accentHover: "#008844", gradientPrimary: "linear-gradient(135deg, #006C35 0%, #005528 100%)", gradientText: "linear-gradient(to right, #008844, #00a854)", r: 0, g: 108, b: 53 }
 };
 
+// 언어별 국기/상징 동물·꽃 (이모지)
+var countryMetaByLang = {
+    ko: { flag: "🇰🇷", symbol: "🌺" }, // 무궁화
+    en: { flag: "🇺🇸", symbol: "🦅" },
+    ja: { flag: "🇯🇵", symbol: "🌸" },
+    vi: { flag: "🇻🇳", symbol: "🌼" },
+    zh: { flag: "🇨🇳", symbol: "🐉" },
+    it: { flag: "🇮🇹", symbol: "🐺" },
+    fr: { flag: "🇫🇷", symbol: "🐓" },
+    de: { flag: "🇩🇪", symbol: "🦅" },
+    am: { flag: "🇪🇹", symbol: "🦁" },
+    ar: { flag: "🇸🇦", symbol: "🌴" }
+};
+
 function applyTheme(lang) {
     var theme = themeByLang[lang];
     if (!theme) theme = themeByLang.ko;
@@ -208,6 +222,14 @@ function setLanguage(lang) {
     if (typeof translations === "undefined") return;
     if (!translations[lang]) lang = "ko";
     var dic = translations[lang];
+
+    // 언어별 국기 및 상징 이모지 표시
+    var meta = countryMetaByLang[lang] || {};
+    var flagEl = document.getElementById("lang-flag");
+    if (flagEl) flagEl.textContent = meta.flag || "";
+    var symbolEl = document.getElementById("lang-symbol");
+    if (symbolEl) symbolEl.textContent = meta.symbol || "";
+
     const elements = document.querySelectorAll("[data-i18n]");
 
     elements.forEach((el) => {
