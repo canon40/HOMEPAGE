@@ -1,0 +1,317 @@
+< !DOCTYPE html >
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Permacoat Blog - 자동 블로그 스튜디오</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    </head>
+    <body class="dark-theme">
+        <!-- Navbar (홈으로 돌아가는 링크 포함) -->
+        <nav class="navbar">
+            <div class="logo">
+                <span class="gradient-text">PERMACOAT</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home" data-i18n="nav_home">Home</a></li>
+                <li><a href="index.html#products" data-i18n="nav_products">Products</a></li>
+                <li><a href="index.html#buyer-docs" data-i18n="nav_buyer">Buyer Docs</a></li>
+                <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
+                <li><a href="index.html#living" data-i18n="nav_living">Duracoat Living Coating</a></li>
+            </ul>
+            <div class="lang-selector notranslate" translate="no">
+                <i class="fa-solid fa-globe"></i>
+                <select id="language-select" translate="no">
+                    <option value="ko">한국어 (Korea)</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語 (Japan)</option>
+                    <option value="vi">Tiếng Việt (Vietnam)</option>
+                    <option value="hi">हिन्दी (India)</option>
+                    <option value="zh">中文 (China)</option>
+                    <option value="it">Italiano (Italy)</option>
+                    <option value="fr">Français (France)</option>
+                    <option value="am">አማርኛ (Ethiopia)</option>
+                    <option value="ar">العربية (Saudi Arabia)</option>
+                </select>
+            </div>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+        <!-- Blog Only Page (simplified: folders + 글쓰기 버튼만) -->
+        <section id="blog" class="section blog-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="gradient-text">자동 블로그</h2>
+                    <p class="section-desc">
+                        아래 폴더 중 하나를 선택한 뒤 <strong>글쓰기</strong> 버튼을 누르면, 선택한 폴더에 맞는 자동 글쓰기 작업이 실행됩니다.
+                    </p>
+                </div>
+
+                <div class="blog-folder-tabs">
+                    <button type="button" class="blog-folder-tab active" data-folder="living">
+                        듀라코트 리빙코트
+                    </button>
+                    <button type="button" class="blog-folder-tab" data-folder="car">
+                        듀라코트 퍼마코트 자동차
+                    </button>
+                    <button type="button" class="blog-folder-tab" data-folder="bike">
+                        듀라코트 퍼마코트 바이크
+                    </button>
+                </div>
+
+                <div class="blog-layout">
+                    <div class="blog-editor glass-panel" data-aos="fade-up">
+                        <h3 class="blog-editor-title">
+                            선택된 폴더
+                            <span class="blog-current-folder" id="blog-current-folder-editor">듀라코트 리빙코트</span>
+                        </h3>
+                        <p class="blog-auto-desc" style="margin-bottom:12px;">
+                            이 버튼은 기존에 만들어 둔 자동 글쓰기 프로그램과 연동되어 있습니다. 듀라코트 리빙코트 / 자동차 / 바이크 폴더 중 선택된 항목에 맞춰
+                            네이버·티스토리·블로거 등에 글쓰기를 요청합니다.
+                        </p>
+                        <div class="blog-header-tools">
+                            <div class="blog-api-status">
+                                <span class="blog-api-status-dot idle" id="blog-api-status-indicator"></span>
+                                <span id="blog-api-status-label">API 미설정</span>
+                            </div>
+                            <button
+                                type="button"
+                                class="btn btn-outline btn-sm"
+                                id="blog-settings-open"
+                                onclick="window.blogInlineOpenSettings && window.blogInlineOpenSettings();"
+                            >
+                                설정
+                            </button>
+                        </div>
+                        <div class="blog-auto-controls" style="justify-content: center; margin-top:16px;">
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                id="blog-auto-generate"
+                                onclick="window.blogInlineGenerate && window.blogInlineGenerate();"
+                            >
+                                글쓰기
+                            </button>
+                        </div>
+                        <span class="blog-status" id="blog-status" style="margin-top:12px; display:block;"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 설정 모달: API URL / 키 + 폴더별 키워드 저장 -->
+        <div class="modal-overlay" id="blog-settings-modal">
+            <div class="modal-content glass-panel" style="max-width: 800px; position: relative;">
+                <button class="modal-close" id="blog-settings-close" type="button">&times;</button>
+                <h3 style="margin-bottom: 12px;">자동 글쓰기 설정</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
+                    duracoat.store 에서 사용할 자동 글쓰기 서버(API) 주소와 키워드를 저장합니다. 여기서 저장한 내용은 브라우저에만 보관됩니다.
+                </p>
+
+                <div class="blog-form" style="margin-bottom: 16px;">
+                    <div>
+                        <label for="blog-api-url">API 엔드포인트 URL</label>
+                        <input id="blog-api-url" type="text" placeholder="예: https://duracoat.store/api/blog/generate" />
+                    </div>
+
+                    <div>
+                        <label for="blog-api-text-key">텍스트 API 키</label>
+                        <input id="blog-api-text-key" type="password" placeholder="텍스트 생성용 API 키" />
+                    </div>
+
+                    <div>
+                        <label for="blog-api-image-key">이미지 API 키</label>
+                        <input id="blog-api-image-key" type="password" placeholder="이미지 생성용 API 키" />
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="font-size: 1rem; margin-bottom: 8px;">폴더별 키워드 (한 줄에 한 개씩)</h4>
+                    <div class="blog-settings-keywords-grid">
+                        <div class="blog-settings-column">
+                            <label for="blog-keywords-living" style="font-size: 0.9rem; color: var(--text-muted);">듀라코트 리빙코트</label>
+                            <textarea id="blog-keywords-living" placeholder="예: 듀라코트 리빙코트 주방, 듀라코트 리빙코트 욕실"></textarea>
+                        </div>
+                        <div class="blog-settings-column">
+                            <label for="blog-keywords-car" style="font-size: 0.9rem; color: var(--text-muted);">듀라코트 퍼마코트 자동차</label>
+                            <textarea id="blog-keywords-car" placeholder="예: 퍼마코트 자동차 유리막, 퍼마코트 셀프세차"></textarea>
+                        </div>
+                        <div class="blog-settings-column">
+                            <label for="blog-keywords-bike" style="font-size: 0.9rem; color: var(--text-muted);">듀라코트 퍼마코트 바이크</label>
+                            <textarea id="blog-keywords-bike" placeholder="예: 퍼마코트 바이크 코팅, 모터사이클 코팅"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-editor-actions" style="margin-top: 18px; justify-content: flex-end;">
+                    <span id="blog-settings-status" style="flex: 1; font-size: 0.85rem; color: var(--text-muted);"></span>
+                    <button
+                        type="button"
+                        class="btn btn-outline btn-sm"
+                        id="blog-settings-save"
+                        onclick="window.blogInlineSaveSettings && window.blogInlineSaveSettings();"
+                    >
+                        저장
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container text-center">
+                <p>&copy; 2026 PERMACOAT. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="js/translations.js"></script>
+        <script src="js/script.js"></script>
+
+        <!-- 블로그 설정을 위한 초간단 인라인 스크립트 (버튼이 항상 동작하도록 분리) -->
+        <script>
+            (function () {
+                const API_KEY = 'permacoatBlogApiConfig';
+                const KW_PREFIX = 'permacoatKeywords_';
+
+                function safeParseJson(raw, fallback) {
+                    if (!raw) return fallback;
+                    try {
+                        const obj = JSON.parse(raw);
+                        return obj && typeof obj === 'object' ? obj : fallback;
+                    } catch {
+                        return fallback;
+                    }
+                }
+
+                function loadKeywords(folder) {
+                    const raw = localStorage.getItem(KW_PREFIX + folder);
+                    if (!raw) return [];
+                    return safeParseJson(raw, []);
+                }
+
+                function saveKeywords(folder, list) {
+                    localStorage.setItem(KW_PREFIX + folder, JSON.stringify(list || []));
+                }
+
+                window.blogInlineOpenSettings = function () {
+                    const modal = document.getElementById('blog-settings-modal');
+                    if (!modal) return;
+
+                    const apiCfg = safeParseJson(localStorage.getItem(API_KEY), {});
+                    const urlInput = document.getElementById('blog-api-url');
+                    const textKeyInput = document.getElementById('blog-api-text-key');
+                    const imageKeyInput = document.getElementById('blog-api-image-key');
+
+                    if (urlInput) urlInput.value = apiCfg.url || '';
+                    if (textKeyInput) textKeyInput.value = apiCfg.textKey || '';
+                    if (imageKeyInput) imageKeyInput.value = apiCfg.imageKey || '';
+
+                    const kwLiving = document.getElementById('blog-keywords-living');
+                    const kwCar = document.getElementById('blog-keywords-car');
+                    const kwBike = document.getElementById('blog-keywords-bike');
+
+                    if (kwLiving) kwLiving.value = loadKeywords('living').join('\n');
+                    if (kwCar) kwCar.value = loadKeywords('car').join('\n');
+                    if (kwBike) kwBike.value = loadKeywords('bike').join('\n');
+
+                    const status = document.getElementById('blog-settings-status');
+                    if (status) status.textContent = '';
+
+                    modal.classList.add('open');
+                };
+
+                window.blogInlineSaveSettings = function () {
+                    const urlInput = document.getElementById('blog-api-url');
+                    const textKeyInput = document.getElementById('blog-api-text-key');
+                    const imageKeyInput = document.getElementById('blog-api-image-key');
+
+                    const url = urlInput ? urlInput.value.trim() : '';
+                    const textKey = textKeyInput ? textKeyInput.value.trim() : '';
+                    const imageKey = imageKeyInput ? imageKeyInput.value.trim() : '';
+
+                    localStorage.setItem(API_KEY, JSON.stringify({ url, textKey, imageKey }));
+
+                    const parseLines = (val) =>
+                        (val || '')
+                            .split(/[\r\n,]+/)
+                            .map((v) => v.trim())
+                            .filter(Boolean);
+
+                    const kwLiving = document.getElementById('blog-keywords-living');
+                    const kwCar = document.getElementById('blog-keywords-car');
+                    const kwBike = document.getElementById('blog-keywords-bike');
+
+                    if (kwLiving) {
+                        const list = parseLines(kwLiving.value);
+                        saveKeywords('living', list);
+                        kwLiving.value = list.join('\n');
+                    }
+                    if (kwCar) {
+                        const list = parseLines(kwCar.value);
+                        saveKeywords('car', list);
+                        kwCar.value = list.join('\n');
+                    }
+                    if (kwBike) {
+                        const list = parseLines(kwBike.value);
+                        saveKeywords('bike', list);
+                        kwBike.value = list.join('\n');
+                    }
+
+                    const status = document.getElementById('blog-settings-status');
+                    if (status) {
+                        status.textContent = '설정을 저장했습니다.';
+                    }
+
+                    // API 상태 단순 표시 (URL 이 있으면 연동됨으로 간주)
+                    const dot = document.getElementById('blog-api-status-indicator');
+                    const label = document.getElementById('blog-api-status-label');
+                    if (dot && label) {
+                        dot.classList.remove('idle', 'error', 'ok');
+                        if (url) {
+                            dot.classList.add('ok');
+                            label.textContent = 'API 설정 완료';
+                        } else {
+                            dot.classList.add('idle');
+                            label.textContent = 'API 미설정';
+                        }
+                    }
+
+                    // 설정 완료 후 모달 닫기
+                    const modal = document.getElementById('blog-settings-modal');
+                    if (modal) {
+                        modal.classList.remove('open');
+                    }
+
+                    alert('자동 글쓰기 설정을 저장했습니다.');
+                };
+
+                // 글쓰기 버튼: API 설정 여부에 따라 안내만 보여주는 단순 모드
+                window.blogInlineGenerate = function () {
+                    const status = document.getElementById('blog-status');
+                    const apiCfg = safeParseJson(localStorage.getItem(API_KEY), {});
+                    const hasUrl = !!apiCfg.url;
+
+                    let msg;
+                    if (hasUrl) {
+                        msg =
+                            '글쓰기 버튼을 눌렀습니다. 저장된 API 엔드포인트로 글쓰기 요청을 보낼 준비가 되어 있습니다. (현재 버전에서는 테스트 메시지만 표시합니다.)';
+                    } else {
+                        msg =
+                            '글쓰기 버튼을 눌렀습니다. 아직 API 엔드포인트 URL 이 설정되지 않아 브라우저 내부 테스트 모드로만 동작합니다.';
+                    }
+
+                    if (status) {
+                        status.textContent = msg;
+                    }
+                    alert(msg);
+                };
+            })();
+        </script>
+    </body>
+</html>
+

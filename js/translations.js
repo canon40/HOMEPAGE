@@ -4,6 +4,7 @@ const translations = {
         nav_products: "제품 라인업",
         nav_finder: "코팅제 추천",
         nav_buyer: "바이어 자료실",
+        nav_blog: "Canon4040 블로그",
         nav_living: "듀라코트 리빙코트",
         hero_title: "퍼마코트 시리즈 3종",
         hero_subtitle: "궁극의 표면 보호를 위한 하이엔드 코팅 솔루션",
@@ -121,13 +122,20 @@ const translations = {
         bike_series_title: "퍼마코트 바이크 시리즈",
         bike_series_desc: "바이크 전용 퍼마코트 라인업입니다.",
         car_series_title: "퍼마코트 자동차 시리즈",
-        car_series_desc: "자동차 전용 퍼마코트 라인업입니다."
+        car_series_desc: "자동차 전용 퍼마코트 라인업입니다.",
+        series_modal_title: "시리즈 한눈에 보기",
+        series_modal_intro: "자동차·바이크 시리즈 요약입니다.",
+        series_modal_body: "🏎️ <strong>PERMACOAT Car Series (자동차용)</strong><br>\"전문가 수준 품질, 당신의 차고에서 경제적으로.\"<br>자동차용 라인은 넓은 도장면의 광택 유지와 지속적인 유지비 절감에 초점을 둡니다.<br><br><strong>[Quick] 일상 케어</strong><br>• 시공 용이: 약 40분 만에 전문가급 코팅 완성.<br>• 즉각 보호: 강한 발수층이 바로 형성됩니다.<br><br><strong>[Titan] 장기 보호</strong><br>• 비용 절감: 코팅 비용($1,000~$5,000+)을 크게 줄입니다.<br>• 내구성: 1회 시공으로 12~24개월 유지.<br><br><strong>[Resin] 쇼카급 마감</strong><br>• 거울 광택: 크리스탈처럼 투명한 반사.<br>• 가치 유지: 강한 UV 차단으로 변색 방지.<br><br>---<br><br>🏍️ <strong>DURACOAT PermaCoat Bike (바이크용)</strong><br>\"극한 고온에도 견디는 보호 성능.\"<br><br><strong>[Quick] 레이스 후 케어</strong><br>• 라이딩 후 관리 시간 최대 70% 단축.<br>• 10,000km 내구 시험 데이터.<br><br><strong>[Titan] 열 차폐</strong><br>• 800°C 내열: 엔진·머플러 보호.<br>• 나노세라믹 9H: 스톤칩·스크래치 방어.<br><br><strong>[Resin] 정밀 마감</strong><br>• 분자 침투: 복잡한 형상까지 광택 극대화.<br>• 산화 억제: 크롬 부품 부식 방지.<br><br>---<br><br>📊 <strong>요약</strong><br>• Quick: 비용·시간 절감, 빠른 시공.<br>• Titan: 9H 경도, 800°C 내열.<br>• Resin: 거울 광택, 산화 방지.",
+        blog_title: "Canon4040의 블로그",
+        blog_subtitle:
+            "퍼마코트·듀라코트와 관련된 콘텐츠를 직접 작성하거나, 하루 10~100개의 자동 블로그 포스트를 생성할 수 있는 실험용 공간입니다. 실제 운영 시에는 이 데이터를 백엔드나 CMS와 연동해 사용하세요.",
     },
     en: {
         nav_home: "Home",
         nav_products: "Products",
         nav_finder: "Finder",
         nav_buyer: "Buyer Docs",
+        nav_blog: "Blog",
         nav_living: "Duracoat Living Coating",
         hero_title: "Permacoat Series",
         hero_subtitle: "Ultimate high-end coating solutions for surface protection.",
@@ -245,7 +253,13 @@ const translations = {
         bike_series_title: "PERMACOAT BIKE SERIES",
         bike_series_desc: "Premium Permacoat lineup dedicated for motorcycles.",
         car_series_title: "PERMACOAT CAR SERIES",
-        car_series_desc: "Premium Permacoat lineup dedicated for cars."
+        car_series_desc: "Premium Permacoat lineup dedicated for cars.",
+        series_modal_title: "Series at a Glance",
+        series_modal_intro: "Car and Bike series summary.",
+        series_modal_body: "🏎️ <strong>PERMACOAT Car Series</strong><br>\"Pro-level quality, economically at your garage.\"<br>Car lineup focuses on maintaining gloss on large painted areas while reducing ongoing maintenance cost.<br><br><strong>[Quick] Daily care</strong><br>• Easy application: Pro-grade coating in about 40 minutes.<br>• Instant protection: Strong hydrophobicity forms immediately.<br><br><strong>[Titan] Long-term protection</strong><br>• Cost savings: Significantly lower coating cost ($1,000–$5,000+).<br>• Durability: One application lasts 12–24 months.<br><br><strong>[Resin] Show-car finish</strong><br>• Mirror gloss: Crystal-clear reflection.<br>• Value retention: Strong UV block, fade resistance.<br><br>---<br><br>🏍️ <strong>DURACOAT PermaCoat Bike</strong><br>\"Protection that withstands extreme heat.\"<br><br><strong>[Quick] Track-day care</strong><br>• Cuts post-ride maintenance time by up to 70%.<br>• 10,000 km durability test data.<br><br><strong>[Titan] Heat shield</strong><br>• Up to 800°C: Engine and exhaust protection.<br>• Nano-ceramic 9H: Stone chips and scratches.<br><br><strong>[Resin] Precision finish</strong><br>• Molecular penetration: Maximum gloss on complex shapes.<br>• Oxidation control: Chrome parts corrosion prevention.<br><br>---<br><br>📊 <strong>Summary</strong><br>• Quick: Cost & time savings, fast application.<br>• Titan: 9H hardness, 800°C heat resistance.<br>• Resin: Mirror shine, anti-oxidation."
+        blog_title: "Auto Blog Studio",
+        blog_subtitle:
+            "Draft Permacoat / Duracoat blog posts manually or generate 10–100 auto posts per day for testing. In production, connect this logic to your backend scheduler or CMS.",
     },
     ja: {
         nav_home: "ホーム",
@@ -365,7 +379,14 @@ const translations = {
         living_modal_spec_li4: "硬化時間：約12〜24時間後に日常使用が可能（指紋防止効果はすぐに発현）",
         living_modal_marketing_title: "マーケティングメッセージ",
         living_modal_marketing_1: "「掃除の時間は半分に、キッチンの品格は2倍に。デュラコート リビングコートが、あなたのゆとりの時間を取り戻します。」",
-        living_modal_marketing_2: "「新築マンションのような清潔さを、失う前に守りましょう。家全体を守る最もスマートな保険、デュラコート リビングコート。」"
+        living_modal_marketing_2: "「新築マンションのような清潔さを、失う前に守りましょう。家全体を守る最もスマートな保険、デュラコート リビングコート。」",
+        bike_series_title: "パーマコート バイクシリーズ",
+        bike_series_desc: "バイク専用パーマコートラインナップです。",
+        car_series_title: "パーマコート カーシリーズ",
+        car_series_desc: "自動車専用パーマコートラインナップです。",
+        series_modal_title: "シリーズ一覧",
+        series_modal_intro: "カー・バイクシリーズの概要です。",
+        series_modal_body: "🏎️ <strong>PERMACOAT Car Series（自動車用）</strong><br>「プロ品質を、ご自宅ガレージで経済的に。」<br>カーラインは広い塗装面の光沢維持とランニングコスト削減に焦点を当てています。<br><br><strong>[Quick] 日常ケア</strong><br>• 施工が簡単：約40分でプロ級コーティング完了。<br>• 即効性：強力な撥水層がすぐに形成。<br><br><strong>[Titan] 長期保護</strong><br>• コスト削減：コーティング費用（$1,000～$5,000+）を大幅に削減。<br>• 耐久性：1回の施工で12～24ヶ月持続。<br><br><strong>[Resin] ショーカー級仕上げ</strong><br>• 鏡面光沢：クリスタルのような透明な反射。<br>• 価値維持：強力なUVカットで変色防止。<br><br>---<br><br>🏍️ <strong>DURACOAT PermaCoat Bike（バイク用）</strong><br>「極限の高温にも耐える保護性能。」<br><br><strong>[Quick] レース後ケア</strong><br>• ライド後のメンテ時間を最大70%削減。<br>• 10,000km耐久テストデータ。<br><br><strong>[Titan] 熱シールド</strong><br>• 800°C耐熱：エンジン・マフラー保護。<br>• ナノセラミック9H：石はね・キズ対策。<br><br><strong>[Resin] 精密仕上げ</strong><br>• 分子浸透：複雑形状まで光沢最大化。<br>• 酸化抑制：クローム部品の腐食防止。<br><br>---<br><br>📊 <strong>まとめ</strong><br>• Quick：コスト・時間削減、短時間施工。<br>• Titan：9H硬度、800°C耐熱。<br>• Resin：鏡面光沢、酸化防止。"
     },
     vi: {
         nav_home: "Trang Chủ",
@@ -509,7 +530,9 @@ const translations = {
         series_modal_tbl_titan_car: "Độ cứng 9H, bảo vệ lên đến 2 năm",
         series_modal_tbl_titan_bike: "Chịu nhiệt 800°C, bảo vệ động cơ/ống xả",
         series_modal_tbl_resin_car: "Bóng như gương, giữ giá trị bề mặt sơn",
-        series_modal_tbl_resin_bike: "Coating nano chính xác, hạn chế oxy hóa kim loại"
+        series_modal_tbl_resin_bike: "Coating nano chính xác, hạn chế oxy hóa kim loại",
+        series_modal_intro: "Tóm tắt dòng ô tô và xe máy.",
+        series_modal_body: "🏎️ <strong>PERMACOAT Car Series (Dành cho Ô tô)</strong><br>\"Chất lượng xưởng chuyên nghiệp, thực hiện tiết kiệm ngay tại gara của bạn.\"<br>Dòng sản phẩm dành cho ô tô tập trung vào việc duy trì độ bóng trên diện tích sơn lớn đồng thời giảm chi phí bảo trì liên tục.<br><br><strong>[Quick] Giải pháp chăm sóc hàng ngày</strong><br>• Thi công dễ dàng: Hoàn thành lớp phủ chuyên nghiệp trong 40 phút.<br>• Bảo vệ tức thì: Hình thành lớp kỵ nước mạnh mẽ ngay lập tức.<br><br><strong>[Titan] Giải pháp bảo vệ dài hạn</strong><br>• Giá trị kinh tế: Giảm đáng kể chi phí phủ ($1,000–$5,000+).<br>• Độ bền vượt trội: Một lần thi công kéo dài 12–24 tháng.<br><br><strong>[Resin] Lớp hoàn thiện Show-car</strong><br>• Độ bóng như gương: Phản chiếu trong suốt như pha lê.<br>• Giữ gìn giá trị: Chặn tia UV mạnh mẽ, ngăn ngừa phai màu.<br><br>---<br><br>🏍️ <strong>DURACOAT PermaCoat Bike (Dành cho Xe máy)</strong><br>\"Hiệu năng bảo vệ chịu được nhiệt độ cực cao.\"<br><br><strong>[Quick] Chăm sóc đường đua hiệu quả</strong><br>• Cắt giảm thời gian bảo trì sau khi lái xe lên đến 70%.<br>• Dữ liệu chứng minh: Thử nghiệm độ bền 10,000 km.<br><br><strong>[Titan] Giải pháp lá chắn nhiệt</strong><br>• Chịu nhiệt đến 800°C: Bảo vệ động cơ và ống xả.<br>• Nano-ceramic 9H: Bảo vệ khỏi đá văng và vết xước.<br><br><strong>[Resin] Chăm sóc chi tiết chính xác</strong><br>• Thâm nhập phân tử: Tối đa hóa độ bóng cho kết cấu phức tạp.<br>• Kiểm soát oxy hóa: Ngăn chặn ăn mòn các bộ phận chrome.<br><br>---<br><br>📊 <strong>Tóm tắt so sánh (Summary)</strong><br>• <strong>Quick</strong>: Tiết kiệm chi phí, hoàn thiện nhanh.<br>• <strong>Titan</strong>: Độ cứng 9H, chịu nhiệt 800°C.<br>• <strong>Resin</strong>: Bóng như gương, chống oxy hóa."
     },
     hi: {
         nav_home: "होम",
@@ -777,7 +800,14 @@ const translations = {
         living_modal_spec_li4: "固化时间：约 12–24 小时后即可正常使用（日常防指纹效果几乎立刻显现）",
         living_modal_marketing_title: "营销文案",
         living_modal_marketing_1: "“清洁时间减半，厨房格调加倍。得而固家居涂层，为你找回悠闲时光。”",
-        living_modal_marketing_2: "“在失去之前，先守住新房的洁净。守护全屋的最聪明之选——得而固家居涂层。”"
+        living_modal_marketing_2: "“在失去之前，先守住新房的洁净。守护全屋的最聪明之选——得而固家居涂层。”",
+        bike_series_title: "珀玛蔻摩托系列",
+        bike_series_desc: "专为摩托车设计的高端珀玛蔻产品线。",
+        car_series_title: "珀玛蔻汽车系列",
+        car_series_desc: "专为汽车设计的高端珀玛蔻产品线。",
+        series_modal_title: "系列一览",
+        series_modal_intro: "汽车与摩托系列概要。",
+        series_modal_body: "🏎️ <strong>PERMACOAT 汽车系列</strong><br>「专业级品质，在您的车库里经济实现。」<br>汽车线聚焦大面积漆面光泽维持与持续养护成本降低。<br><br><strong>[Quick] 日常护理</strong><br>• 施工简便：约 40 分钟完成专业级镀膜。<br>• 即时保护：强疏水层即刻形成。<br><br><strong>[Titan] 长效保护</strong><br>• 经济实惠：显著降低镀膜成本（$1,000–$5,000+）。<br>• 持久耐用：一次施工维持 12–24 个月。<br><br><strong>[Resin] 展车级 finish</strong><br>• 镜面光泽：如水晶般通透反射。<br>• 保值：强 UV 阻隔，防褪色。<br><br>---<br><br>🏍️ <strong>DURACOAT PermaCoat 摩托</strong><br>「承受极端高温的防护性能。」<br><br><strong>[Quick] 赛道日护理</strong><br>• 骑行后养护时间最多减少 70%。<br>• 10,000 km 耐久测试数据。<br><br><strong>[Titan] 热盾</strong><br>• 耐 800°C：发动机与排气保护。<br>• 纳米陶瓷 9H：防石击与划痕。<br><br><strong>[Resin] 精密 finish</strong><br>• 分子渗透：复杂结构上最大化光泽。<br>• 氧化控制：抑制镀铬件腐蚀。<br><br>---<br><br>📊 <strong>概要</strong><br>• Quick：省时省费，快速施工。<br>• Titan：9H 硬度，800°C 耐热。<br>• Resin：镜面光泽，防氧化。"
     },
     it: {
         nav_home: "Home",
