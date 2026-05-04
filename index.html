@@ -106,6 +106,42 @@
                         <span data-i18n="finder_cta">코팅제 추천</span>
                     </button>
 
+                    <!-- Buyer Docs Section -->
+                    <section id="buyer-docs" class="section buyer-section">
+                        <div class="container">
+                            <div class="section-header" data-aos="fade-up">
+                                <h2 class="gradient-text">바이어 자료실</h2>
+                                <p class="section-desc">
+                                    퍼마코트 / 듀라코트의 기술 소개서(PPT/PDF)를 언어별로 내려받을 수 있는 공간입니다.
+                                </p>
+                            </div>
+
+                            <div class="download-grid">
+                                <div class="download-card glass-panel" data-aos="fade-up" data-aos-delay="50">
+                                    <h3 data-i18n="docs_title">기술 소개서(PPT/PDF)</h3>
+                                    <p class="download-desc" data-i18n="docs_desc">
+                                        하이브리드 폴리실라잔 기술 플랫폼 소개서입니다. 아래에서 언어를 선택하고 다운로드하세요.
+                                    </p>
+                                    <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 10px;">
+                                        <select id="manual-lang-select" style="padding: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: #fff; width: 100%; font-size: 0.9rem;">
+                                            <option value="docs/manuals/NANUMLAB_(나눔랩)_-_하이브리드_폴리실라잔_기술_플랫폼.pdf">한국어 (Korean)</option>
+                                            <option value="docs/manuals/NANUMLAB_-_Hybrid_Polysilazane_Technology_Platform.pdf">English</option>
+                                            <option value="docs/manuals/NANUMLAB_-_Nền_tảng_Công_nghệ_Hybrid_Polysilazane.pdf">Tiếng Việt (Vietnamese)</option>
+                                            <option value="docs/manuals/NANUMLAB_-_Plataforma_de_Tecnología_Híbrida_de_Polisilazano.pdf">Español (Spanish)</option>
+                                            <option value="docs/manuals/NANUMLAB_-_Plateforme_technologique_hybride_de_polysilazane.pdf">Français (French)</option>
+                                            <option value="docs/manuals/NANUMLAB_-_Technologieplattform_für_Hybrid-Polysilazan.pdf">Deutsch (German)</option>
+                                            <option value="docs/manuals/NANUMLAB_納諾實驗室_-_混合聚硅氮烷技術平台.pdf">繁體中文 (Traditional Chinese)</option>
+                                            <option value="docs/manuals/NANUMLAB_纳诺实验室_-_混合聚硅氮烷技术平台.pdf">简体中文 (Simplified Chinese)</option>
+                                            <option value="docs/manuals/نانوم_لاب_(NANUMLAB)_-_منصة_تكنولوجيا_الهجين_بوليسيلازان.pdf">العربية (Arabic)</option>
+                                            <option value="docs/manuals/नैनम_लैब_(NANUMLAB)_-_हाइब्रिड_पॉलीसिलेजिन_तकनीक.pdf">हिन्दी (Hindi)</option>
+                                        </select>
+                                        <button class="btn btn-primary btn-sm" onclick="const a = document.createElement('a'); a.href = document.getElementById('manual-lang-select').value; a.download = ''; document.body.appendChild(a); a.click(); document.body.removeChild(a);" data-i18n="btn_download" style="width: 100%;">다운로드</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                     <!-- Living Coating Section -->
                     <section id="living" class="section living-section">
                         <div class="living-bg-overlay"></div>
